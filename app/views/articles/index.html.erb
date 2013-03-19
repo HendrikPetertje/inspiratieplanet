@@ -1,0 +1,27 @@
+        <div id="container">
+            
+            <div id="header">
+            <img src="images/header.png" alt=""><br />
+            <%= link_to 'New Article', new_article_path %>
+            </div>
+
+            <div class="firstarticle">
+                <% firsttext =  @articles.last %>
+                <h2><%= firsttext.title %></h2>
+                <%= firsttext.content %>
+                
+            </div>
+
+            <% @articles.sort_by{|t| - t.created_at.to_i}.first(4).each do |article| %>
+                <div class="tile">
+                    <%= link_to(article) do %>
+                    <h2><%= article.title %></h2>
+                    <img src="<%= article.picture %>" alt"" />
+                    <% end %>
+                </div>
+            <% end %>
+            
+            <div class="cleardiv"></div>
+            
+
+            <div id="footer">Footer content</div>
