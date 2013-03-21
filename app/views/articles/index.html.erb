@@ -6,9 +6,8 @@
             </div>
 
             <div class="firstarticle">
-                <% firsttext =  @articles.last %>
-                
-                <%= firsttext.content %>
+                <h2><%= @articles.last.title %></h2>
+                <%= @articles.last.content %>
                 
             </div>
 
