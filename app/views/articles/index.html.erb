@@ -5,11 +5,7 @@
             <%= link_to 'New Article', new_article_path %>
             </div>
 
-            <div class="firstarticle">
-                <h2><%= @articles.last.title %></h2>
-                <%= @articles.last.content %>
-                
-            </div>
+            
 
             <% @articles.sort_by{|t| - t.created_at.to_i}.first(4).each do |article| %>
                 <div class="tile">
