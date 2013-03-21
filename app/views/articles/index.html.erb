@@ -1,55 +1,31 @@
-        <div id="container">
-            
-            <div class="header">
-            <img src="images/header.png" alt=""><br />
-            <%= link_to 'New Article', new_article_path %>
-            </div>
+<h1>Listing articles</h1>
 
-            <div class="firstarticle">
-                <h2><%= @articles.last.title %></h2>
-                <%= @articles.last.content %>
-                
-            </div>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Content</th>
+    <th>Picture</th>
+    <th>Tags</th>
+    <th>User</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
 
-            <% @articles.sort_by{|t| - t.created_at.to_i}.first(4).each do |article| %>
-                <div class="tile">
-                    <%= link_to(article) do %>
-                    <h2><%= article.title %></h2>
-                    <img src="<%= article.picture %>" alt"" />
-                    <% end %>
-                </div>
-            <% end %>
-            
-            <div class="cleardiv"></div>
-            
-        </div>
-        <div class="footercontainer">
-            <div class="footercontent">
-                <div class="footer">
-                    <h4>Sitemap</h4>
-                <ul>
-                    <li><%= link_to 'Home', articles_path %></li>
-                    <li><a href="#">pagina 1</a></li>
-                    <li><a href="#">pagina 2</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">over</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-                </div>
+<% @articles.each do |article| %>
+  <tr>
+    <td><%= article.title %></td>
+    <td><%= article.content %></td>
+    <td><%= article.picture %></td>
+    <td><%= article.tags %></td>
+    <td><%= article.user_id %></td>
+    <td><%= link_to 'Show', article %></td>
+    <td><%= link_to 'Edit', edit_article_path(article) %></td>
+    <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
 
+<br />
 
-                <div class="footer">
-                <h4>Inloggen</h4>
-                <a href="#">Log in</a> en stuur je eigen artikelen!<br />
-
-                <h4>Klein contact
-                </div>
-
-                <div class="footer">
-                    
-                </div>
-                
-                <div class="cleardiv"></div>
-            </div>
-        </div>
+<%= link_to 'New Article', new_article_path %>
