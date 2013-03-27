@@ -10,6 +10,11 @@
                 <%= @articles.last.content %>
                 
             </div>
+            <br><br>
+            <div class="replacercontent">
+            this is the instance of code loaded when the page loads. this content comes form the index.html file.
+        </div>
+            <button onclick="drama()">Push to add some drama</button>
 
             <div class="randombutton">
             <%= link_to 'random', @randomarticle.first%>
