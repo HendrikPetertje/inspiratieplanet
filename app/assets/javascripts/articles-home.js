@@ -1,0 +1,1 @@
+// This is the javascript file for articles home. all code for articles should go here

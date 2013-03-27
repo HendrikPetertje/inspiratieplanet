@@ -1,5 +1,2 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
-
+// this is de default javascript file for the application. functions that should be implemented on all article pages go here
 alert("Goedzo, je hebt je eigen probleem opgelost!");
