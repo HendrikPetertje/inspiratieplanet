@@ -11,6 +11,14 @@
                 
             </div>
 
+            <div class="randombutton">
+            <%= link_to 'random', @randomarticle.first%>
+            <%= javascript_tag do %>
+                window.randomOne = "<%=j @randomarticle.first.title %>";
+                
+            <% end %>
+            </div>
+
             <% @articles.sort_by{|t| - t.created_at.to_i}.first(4).each do |article| %>
                 <div class="tile">
                     <%= link_to(article) do %>
