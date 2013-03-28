@@ -4,3 +4,17 @@ function drama() {
 	$('.replacercontent').empty();
 	$('.replacercontent').append('hier kom een hook die de json uitleest en er random conent in zet.');
 }
+
+function dramaTwo() {
+	$.getJSON('articles.json', function(data) {
+	  $('.result').html(data);
+
+		$.each(data, function(id, title) {
+		data.push('<li id="' + id + '">' + title + '</li>');
+		});
+		$('<ul/>', {
+			'class': 'my-new-list',
+			html: data.join('')
+		}).appendTo('.raplacercontent');
+	});
+}
