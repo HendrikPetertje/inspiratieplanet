@@ -3,11 +3,10 @@ class ArticlesController < ApplicationController
   # GET /articles.json
   def index
     @articles = Article.all
-    @randomarticle = Article.all(:order => "RANDOM()", :limit => 50)
-
+    @randomarticle = Article.all(:order => "RANDOM()", :limit => 5)
      respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @articles }
+      format.json { render json: @randomarticle }
     end
   end
 

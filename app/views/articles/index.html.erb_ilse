@@ -1,0 +1,126 @@
+<!--SPORE======================================================================================================-->
+<div id="spore_wrapper">
+	<div id="spore_container">
+		<a href="#"><div class="spore_item corner"></div></a>
+		<a href="#"><div class="spore_item corner"></div></a>
+		<a href="#"><div class="spore_item corner"></div></a>
+		<a href="#"><div class="spore_item corner"></div></a>
+		<a href="#"><div class="spore_item corner"></div></a>
+		<a href="#"><div class="spore_item corner"></div></a>
+		<a href="#"><div class="spore_item corner"></div></a>
+		<a href="#"><div class="spore_item corner"></div></a>
+		<a href="#"><div class="spore_item corner"></div></a>
+	</div>
+
+	<div id="btn_container"> 
+		<button id="btn_spore"></button>
+	</div>
+
+</div>
+
+<!--Artikelen======================================================================================================-->
+
+	<header>
+			<!--INLOGGEN ====================================-->
+			<div id="inlog_wrapper">
+				<button id="btn_inloggen" class="boven corner">Inloggen</button>
+				<button id="btn_registreren" class="boven corner">Registreren</button>
+			</div>
+	</header>
+
+<div id="wrapper">
+
+
+
+
+<div class="artikel_wrapper">
+	<div class="artikel corner">
+			<img src="images/image1.png" alt="Images" class="corner flip">
+
+
+			<div class="artikel_tekst_1 artikel_tekst">
+				<h3>Titel</h3>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+				<button class="open_artikel">Bekijken</button>
+			</div>
+	</div>
+</div>
+
+<!--RANDOM KNOP======================================================================================================-->
+<div class="artikel_wrapper random">
+		<div id="random_1" class="artikel corner">
+			<div id="random_button_wrapper">
+				<h3>Geen Inspiratie ?</h3>
+				<p><button id="random_btn">Verras Mij!</button></p>
+				<input id="zoeken"type="text" placeholder="zoeken"/>
+				<select>
+					<option>Alles</option>
+					<option>categorie 1</option>
+					<option>categorie 2</option>
+					<option>categorie 3</option>
+					<option>categorie 4</option>
+					<option>categorie 5</option>
+				</select>
+		</div>
+	</div>
+
+</div>
+
+<div class="artikel_wrapper">
+	<div class="artikel corner">
+			<img src="images/image1.png" alt="Images" class="corner">
+			<div class="artikel_tekst_2 artikel_tekst">
+				<h3>Titel</h3>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+				<button class="open_artikel">Bekijken</button>
+			</div>
+	</div>
+</div>
+
+
+
+
+<div class="artikel_wrapper">
+	<div class="artikel corner">
+			<img src="images/image1.png" alt="Images" class="corner">
+			<div class="artikel_tekst_3 artikel_tekst">
+				<h3>Titel</h3>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber templisi. Nam liber temp
+					lisi. Nam liber temp
+					lisi. Nam liber temp
+					lisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+				<button class="open_artikel">Bekijken</button>
+			</div>
+			
+	</div>
+</div>
+
+<div class="artikel_wrapper">
+	<div class="artikel corner">
+			<img src="images/image1.png" alt="Images" class="corner">
+			<div class="artikel_tekst_4 artikel_tekst">
+				<h3>Titel</h3>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber templisi. Nam liber temp
+					lisi. Nam liber temp
+					lisi. Nam liber temp
+					lisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+				<button class="open_artikel">Bekijken</button>
+			</div>
+			
+	</div>
+</div>
+
+<div class="artikel_wrapper">
+	<div class="artikel corner">
+			<img src="images/image1.png" alt="Images" class="corner">
+			<div class="artikel_tekst_5 artikel_tekst">
+				<h3>Titel</h3>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber templisi. Nam liber temp
+					lisi. Nam liber temp
+					lisi. Nam liber temp
+					lisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+				<button class="open_artikel">Bekijken</button>
+			</div>
+			
+	</div>
+</div>
