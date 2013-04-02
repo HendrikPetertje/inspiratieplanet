@@ -1,0 +1,69 @@
+        <div id="container">
+            
+            <div class="header">
+            <img src="images/header.png" alt=""><br />
+            <%= link_to 'New Article', new_article_path %>
+            </div>
+
+            <div class="firstarticle">
+                <h2><%= @articles.last.title %></h2>
+                <%= @articles.last.content %>
+                
+            </div>
+            <br><br>
+            <div class="replacercontent">
+            this is the instance of code loaded when the page loads. this content comes form the index.html file.
+        </div>
+            <button onclick="drama()">Push to add some drama</button>
+            <button id="dramaTwo">Push to add content</button>
+
+            <div class="randombutton">
+            <%= link_to 'random', @randomarticle.first%>
+            <%= javascript_tag do %>
+                window.randomOne = "<%=j @randomarticle.first.title %>";
+                
+            <% end %>
+            </div>
+
+            <% @articles.sort_by{|t| - t.created_at.to_i}.first(4).each_with_index do |article, index| %>
+                <div class="tile" id="tile<% index %>">
+                    <%= link_to(article) do %>
+                    <h2><%= article.title %></h2>
+                    <img src="<%= article.picture %>" alt"" />
+                    <% end %>
+                </div>
+            <% end %>
+            
+            <div class="cleardiv"></div>
+            
+        </div>
+        <div class="footercontainer">
+            <div class="footercontent">
+                <div class="footer">
+                    <h4>Sitemap</h4>
+                <ul>
+                    <li><%= link_to 'Home', articles_path %></li>
+                    <li><a href="#">pagina 1</a></li>
+                    <li><a href="#">pagina 2</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">over</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                </div>
+
+
+                <div class="footer">
+                <h4>Inloggen</h4>
+                <a href="#">Log in</a> en stuur je eigen artikelen!<br />
+
+                <h4>Klein contact
+                </div>
+
+                <div class="footer">
+                    
+                </div>
+                
+                <div class="cleardiv"></div>
+            </div>
+        </div>

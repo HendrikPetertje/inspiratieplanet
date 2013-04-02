@@ -1,69 +1,128 @@
-        <div id="container">
-            
-            <div class="header">
-            <img src="images/header.png" alt=""><br />
-            <%= link_to 'New Article', new_article_path %>
-            </div>
+<!--SPORE======================================================================================================-->
+<div id="spore_wrapper">
+	<div id="spore_container">
+		<a href="#"><div class="spore_item corner"></div></a>
+		<a href="#"><div class="spore_item corner"></div></a>
+		<a href="#"><div class="spore_item corner"></div></a>
+		<a href="#"><div class="spore_item corner"></div></a>
+		<a href="#"><div class="spore_item corner"></div></a>
+		<a href="#"><div class="spore_item corner"></div></a>
+		<a href="#"><div class="spore_item corner"></div></a>
+		<a href="#"><div class="spore_item corner"></div></a>
+		<a href="#"><div class="spore_item corner"></div></a>
+	</div>
 
-            <div class="firstarticle">
-                <h2><%= @articles.last.title %></h2>
-                <%= @articles.last.content %>
-                
-            </div>
-            <br><br>
-            <div class="replacercontent">
-            this is the instance of code loaded when the page loads. this content comes form the index.html file.
-        </div>
-            <button onclick="drama()">Push to add some drama</button>
-            <button id="dramaTwo">Push to add content</button>
+	<div id="btn_container"> 
+		<button id="btn_spore"></button>
+	</div>
 
-            <div class="randombutton">
-            <%= link_to 'random', @randomarticle.first%>
-            <%= javascript_tag do %>
-                window.randomOne = "<%=j @randomarticle.first.title %>";
-                
-            <% end %>
-            </div>
+</div>
 
-            <% @articles.sort_by{|t| - t.created_at.to_i}.first(4).each_with_index do |article, index| %>
-                <div class="tile" id="tile<% index %>">
-                    <%= link_to(article) do %>
-                    <h2><%= article.title %></h2>
-                    <img src="<%= article.picture %>" alt"" />
-                    <% end %>
-                </div>
-            <% end %>
-            
-            <div class="cleardiv"></div>
-            
-        </div>
-        <div class="footercontainer">
-            <div class="footercontent">
-                <div class="footer">
-                    <h4>Sitemap</h4>
-                <ul>
-                    <li><%= link_to 'Home', articles_path %></li>
-                    <li><a href="#">pagina 1</a></li>
-                    <li><a href="#">pagina 2</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">over</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-                </div>
+<!--Artikelen======================================================================================================-->
+
+	<header>
+			<!--INLOGGEN ====================================-->
+			<div id="inlog_wrapper">
+				<button id="btn_inloggen" class="boven corner">Inloggen</button>
+				<button id="btn_registreren" class="boven corner">Registreren</button>
+			</div>
+	</header>
+
+<div id="wrapper">
 
 
-                <div class="footer">
-                <h4>Inloggen</h4>
-                <a href="#">Log in</a> en stuur je eigen artikelen!<br />
 
-                <h4>Klein contact
-                </div>
 
-                <div class="footer">
-                    
-                </div>
-                
-                <div class="cleardiv"></div>
-            </div>
-        </div>
+<div class="artikel_wrapper">
+	<div class="artikel corner">
+		<!-- <font class="artikel_1_img"> -->
+			<img src="<%= @articles.last.picture %>" alt="Images" class="image1 corner flip">
+		<!-- </font> -->
+
+
+			<div class="artikel_tekst_1 artikel_tekst">
+				<h3 class="title1"><%= @articles.last.title %></h3>
+				<div class="article1"><p><%= @articles.last.content %></p></div>
+				<%= button_to 'bekijken', @articles.last, :method => :get, :class => 'open_artikel' %>
+			</div>
+	</div>
+</div>
+
+<!--RANDOM KNOP======================================================================================================-->
+<div class="artikel_wrapper random">
+		<div id="random_1" class="artikel corner">
+			<div id="random_button_wrapper">
+				<h3>Geen Inspiratie ?</h3>
+				<p><button id="random_btn">Verras Mij!</button></p>
+				<input id="zoeken"type="text" placeholder="zoeken"/>
+				<select>
+					<option>Alles</option>
+					<option>categorie 1</option>
+					<option>categorie 2</option>
+					<option>categorie 3</option>
+					<option>categorie 4</option>
+					<option>categorie 5</option>
+				</select>
+		</div>
+	</div>
+
+</div>
+
+<div class="artikel_wrapper">
+	<div class="artikel corner">
+			<img src="images/image1.png" alt="Images" class="corner">
+			<div class="artikel_tekst_2 artikel_tekst">
+				<h3>Titel</h3>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+				<button class="open_artikel">Bekijken</button>
+			</div>
+	</div>
+</div>
+
+
+
+
+<div class="artikel_wrapper">
+	<div class="artikel corner">
+			<img src="images/image1.png" alt="Images" class="corner">
+			<div class="artikel_tekst_3 artikel_tekst">
+				<h3>Titel</h3>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber templisi. Nam liber temp
+					lisi. Nam liber temp
+					lisi. Nam liber temp
+					lisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+				<button class="open_artikel">Bekijken</button>
+			</div>
+			
+	</div>
+</div>
+
+<div class="artikel_wrapper">
+	<div class="artikel corner">
+			<img src="images/image1.png" alt="Images" class="corner">
+			<div class="artikel_tekst_4 artikel_tekst">
+				<h3>Titel</h3>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber templisi. Nam liber temp
+					lisi. Nam liber temp
+					lisi. Nam liber temp
+					lisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+				<button class="open_artikel">Bekijken</button>
+			</div>
+			
+	</div>
+</div>
+
+<div class="artikel_wrapper">
+	<div class="artikel corner">
+			<img src="images/image1.png" alt="Images" class="corner">
+			<div class="artikel_tekst_5 artikel_tekst">
+				<h3>Titel</h3>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber templisi. Nam liber temp
+					lisi. Nam liber temp
+					lisi. Nam liber temp
+					lisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+				<button class="open_artikel">Bekijken</button>
+			</div>
+			
+	</div>
+</div>
