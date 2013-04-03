@@ -43,7 +43,9 @@
 			<div class="artikel_tekst_1 artikel_tekst">
 				<h3 class="title1"><%= @articles.last.title %></h3>
 				<div class="article1"><p><%= @articles.last.content %></p></div>
+				<div class="button1">
 				<%= button_to 'bekijken', @articles.last, :method => :get, :class => 'open_artikel' %>
+				</div>
 			</div>
 	</div>
 </div>
@@ -74,7 +76,9 @@
 			<div class="artikel_tekst_2 artikel_tekst">
 				<h3 class="title2"><%= @articles[-2].title %></h3>
 				<div class="article2"><p><%= @articles[-2].content %></p></div>
-				<%= button_to 'bekijken', @articles[-2], :method => :get, :class => 'open_artikel' %>
+				<div class="button2">
+				<%= button_to 'bekijken', @articles[-2], :method => :get, :class => 'open_artikel button2' %>
+				</div>
 			</div>
 	</div>
 </div>
@@ -88,7 +92,9 @@
 			<div class="artikel_tekst_3 artikel_tekst">
 				<h3 class="title3"><%= @articles[-3].title %></h3>
 				<div class="article3"><p><%= @articles[-3].content %></p></div>
-				<%= button_to 'bekijken', @articles[-3], :method => :get, :class => 'open_artikel' %>
+				<div class="button3">
+				<%= button_to 'bekijken', @articles[-3], :method => :get, :class => 'open_artikel button3' %>
+				</div>
 			</div>
 			
 	</div>
@@ -100,7 +106,9 @@
 			<div class="artikel_tekst_4 artikel_tekst">
 				<h3 class="title4"><%= @articles[-4].title %></h3>
 				<div class="article4"><p><%= @articles[-4].content %></p></div>
-				<%= button_to 'bekijken', @articles[-4], :method => :get, :class => 'open_artikel' %>
+				<div class="button4">
+				<%= button_to 'bekijken', @articles[-4], :method => :get, :class => 'open_artikel button4' %>
+				</div>
 			</div>
 			
 	</div>
@@ -112,7 +120,9 @@
 			<div class="artikel_tekst_5 artikel_tekst">
 				<h3 class="title5"><%= @articles[-5].title %></h3>
 				<div class="article5"><p><%= @articles[-5].content %></p></div>
-				<%= button_to 'bekijken', @articles[-5], :method => :get, :class => 'open_artikel' %>
+				<div class="button5">
+				<%= button_to 'bekijken', @articles[-5], :method => :get, :class => 'open_artikel button5' %>
+				</div>
 			</div>
 			
 	</div>

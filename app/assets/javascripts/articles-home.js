@@ -54,6 +54,13 @@ $(function() {
 			$('.title3').text(random_item_3.title);
 			$('.title4').text(random_item_4.title);
 			$('.title5').text(random_item_5.title);
+
+			//replace buttons
+			$('.button1').empty().append('<form action="/articles/' + random_item_1.id + '" class="button_to" method="get"><div><input class="open_artikel" type="submit" value="bekijken"></div></form>')
+			$('.button2').empty().append('<form action="/articles/' + random_item_2.id + '" class="button_to" method="get"><div><input class="open_artikel" type="submit" value="bekijken"></div></form>')
+			$('.button3').empty().append('<form action="/articles/' + random_item_3.id + '" class="button_to" method="get"><div><input class="open_artikel" type="submit" value="bekijken"></div></form>')
+			$('.button4').empty().append('<form action="/articles/' + random_item_4.id + '" class="button_to" method="get"><div><input class="open_artikel" type="submit" value="bekijken"></div></form>')
+			$('.button5').empty().append('<form action="/articles/' + random_item_5.id + '" class="button_to" method="get"><div><input class="open_artikel" type="submit" value="bekijken"></div></form>')
 		})
 	})
 
