@@ -1,30 +1,49 @@
-<p id="notice"><%= notice %></p>
+<!--SPORE======================================================================================================-->
+<div id="spore_wrapper">
+	<div id="spore_container">
+		<a href="#"><div class="spore_item corner"></div></a>
+		<a href="#"><div class="spore_item corner"></div></a>
+		<a href="#"><div class="spore_item corner"></div></a>
+		<a href="#"><div class="spore_item corner"></div></a>
+		<a href="#"><div class="spore_item corner"></div></a>
+		<a href="#"><div class="spore_item corner"></div></a>
+		<a href="#"><div class="spore_item corner"></div></a>
+		<a href="#"><div class="spore_item corner"></div></a>
+		<a href="#"><div class="spore_item corner"></div></a>
+	</div>
 
-<p>
-  <b>Title:</b>
-  <%= @article.title %>
-</p>
+	<div id="btn_container"> 
+		<button id="btn_spore"></button>
+	</div>
 
-<p>
-  <b>Content:</b>
-  <%= @article.content %>
-</p>
+</div>
 
-<p>
-  <b>Picture:</b>
-  <%= @article.picture %>
-</p>
+<!--Artieklen======================================================================================================-->
 
-<p>
-  <b>Tags:</b>
-  <%= @article.tags %>
-</p>
-
-<p>
-  <b>User:</b>
-  <%= @article.user_id %>
-</p>
-
-
-<%= link_to 'Edit', edit_article_path(@article) %> | 
+	<header>
+			<!--INlOGGEN ====================================-->
+			<div style="display:none;">
+				<%= link_to 'Edit', edit_article_path(@article) %> | 
 <%= link_to 'Back', articles_path %> | <%= button_to 'Verwijderen', @article, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+			</div>
+			<div id="inlog_wrapper">
+				<button id="btn_inloggen" class="boven corner">Inloggen</button>
+				<button id="btn_registreren" class="boven corner">Registreren</button>
+			</div>
+	</header>
+
+<div id="wrapper">
+
+<div id="artikel_bekijken" class="corner">
+<h3><%= @article.title %></h3>
+<div id="text">
+<%= @article.content %>
+</div>
+	<!-- <img src="<%= @article.picture %>"> -->
+	<div id="tages"><br>
+	<b>Tags</b><br> 
+		<%= @article.tags %>
+	</div>
+</div>
+</div>

@@ -70,11 +70,11 @@
 
 <div class="artikel_wrapper">
 	<div class="artikel corner">
-			<img src="images/image1.png" alt="Images" class="corner">
+			<img src="<%= @articles[-2].picture %>" alt="Images" class="image2 corner">
 			<div class="artikel_tekst_2 artikel_tekst">
-				<h3>Titel</h3>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
-				<button class="open_artikel">Bekijken</button>
+				<h3 class="title2"><%= @articles[-2].title %></h3>
+				<div class="article2"><p><%= @articles[-2].content %></p></div>
+				<%= button_to 'bekijken', @articles[-2], :method => :get, :class => 'open_artikel' %>
 			</div>
 	</div>
 </div>
@@ -84,14 +84,11 @@
 
 <div class="artikel_wrapper">
 	<div class="artikel corner">
-			<img src="images/image1.png" alt="Images" class="corner">
+			<img src="<%= @articles[-3].picture %>" alt="Images" class="image3 corner">
 			<div class="artikel_tekst_3 artikel_tekst">
-				<h3>Titel</h3>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber templisi. Nam liber temp
-					lisi. Nam liber temp
-					lisi. Nam liber temp
-					lisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
-				<button class="open_artikel">Bekijken</button>
+				<h3 class="title3"><%= @articles[-3].title %></h3>
+				<div class="article3"><p><%= @articles[-3].content %></p></div>
+				<%= button_to 'bekijken', @articles[-3], :method => :get, :class => 'open_artikel' %>
 			</div>
 			
 	</div>
@@ -99,14 +96,11 @@
 
 <div class="artikel_wrapper">
 	<div class="artikel corner">
-			<img src="images/image1.png" alt="Images" class="corner">
+			<img src="<%= @articles[-4].picture %>" alt="Images" class="image4 corner">
 			<div class="artikel_tekst_4 artikel_tekst">
-				<h3>Titel</h3>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber templisi. Nam liber temp
-					lisi. Nam liber temp
-					lisi. Nam liber temp
-					lisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
-				<button class="open_artikel">Bekijken</button>
+				<h3 class="title4"><%= @articles[-4].title %></h3>
+				<div class="article4"><p><%= @articles[-4].content %></p></div>
+				<%= button_to 'bekijken', @articles[-4], :method => :get, :class => 'open_artikel' %>
 			</div>
 			
 	</div>
@@ -114,14 +108,11 @@
 
 <div class="artikel_wrapper">
 	<div class="artikel corner">
-			<img src="images/image1.png" alt="Images" class="corner">
+			<img src="<%= @articles[-4].picture %>" alt="Images" class="image4 corner">
 			<div class="artikel_tekst_5 artikel_tekst">
-				<h3>Titel</h3>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber templisi. Nam liber temp
-					lisi. Nam liber temp
-					lisi. Nam liber temp
-					lisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
-				<button class="open_artikel">Bekijken</button>
+				<h3 class="title4"><%= @articles[-4].title %></h3>
+				<div class="article4"><p><%= @articles[-4].content %></p></div>
+				<%= button_to 'bekijken', @articles[-4], :method => :get, :class => 'open_artikel' %>
 			</div>
 			
 	</div>
