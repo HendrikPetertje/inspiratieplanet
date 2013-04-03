@@ -39,18 +39,21 @@ $(function() {
 			$('.image2').attr("src", random_item_2.picture);
 			$('.image3').attr("src", random_item_3.picture);
 			$('.image4').attr("src", random_item_4.picture);
-			// $('.image5').attr("src", random_item_5.picture);
+			$('.image5').attr("src", random_item_5.picture);
 
 			//replace texts
 			$('.article1').empty().append('<p>' + random_item_1.content + '</p>');
 			$('.article2').empty().append('<p>' + random_item_2.content + '</p>');
 			$('.article3').empty().append('<p>' + random_item_3.content + '</p>');
 			$('.article4').empty().append('<p>' + random_item_4.content + '</p>');
-			// $('.article5').empty().append('<p>' + random_item_5.content + '</p>');
+			$('.article5').empty().append('<p>' + random_item_5.content + '</p>');
 
 			//replace titles
 			$('.title1').text(random_item_1.title);
 			$('.title2').text(random_item_2.title);
+			$('.title3').text(random_item_3.title);
+			$('.title4').text(random_item_4.title);
+			$('.title5').text(random_item_5.title);
 		})
 	})
 
