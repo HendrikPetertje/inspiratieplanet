@@ -23,7 +23,7 @@
 	<header>
 			<!--INLOGGEN ====================================-->
 			<div id="inlog_wrapper">
-				<button id="btn_inloggen" class="boven corner">Inloggen</button>
+				<%= button_to 'Inloggen', '/login', :method => :get, :class => 'boven corner', :id => 'btn_inloggen' %> 
 				<button id="btn_registreren" class="boven corner">Registreren</button>
 			</div>
 	</header>

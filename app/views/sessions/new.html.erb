@@ -1,0 +1,25 @@
+<h1>Login</h1>
+
+<div>
+	<% if flash[:status] == false %>
+	<%= flash[:alert] %>
+	<% end %>
+</div>
+
+<%= form_for(:session, :url => sessions_path) do |f| %>
+
+	<div>
+		<%= f.label :email %><br/><br/>
+		<%= f.text_field :email, :placeholder => 'E-mail' %>
+	</div>
+
+	<div>
+		<br/><%= f.label :password %><br/><br/>
+		<%= f.password_field :password, :placeholder => 'Password' %>
+	</div>
+
+	<div>
+		<br/><%= submit_tag "Login" %>
+	</div>
+
+<% end %>
