@@ -1,4 +1,5 @@
 <!--SPORE======================================================================================================-->
+
 <div id="spore_wrapper">
 	<div id="spore_container">
 		<a href="#"><div class="spore_item corner"></div></a>
@@ -23,8 +24,14 @@
 	<header>
 			<!--INLOGGEN ====================================-->
 			<div id="inlog_wrapper">
-				<%= button_to 'Inloggen', '/login', :method => :get, :class => 'boven corner', :id => 'btn_inloggen' %> 
-				<button id="btn_registreren" class="boven corner">Registreren</button>
+				<%= button_to 'Inloggen', '/login', :method => :get, :class => 'boven corner', :id => 'btn_inloggen' %>
+				<%= button_to 'Registeren', '/register', :method => :get, :class => 'boven corner', :id => 'registeren' %>
+				<%= button_to 'Logout', '/logout', :method => :get, :class => 'boven corner', :id => 'btn_logout' %>
+			</div>
+
+			<div id="loggedin">
+				<% @current_user = User.find(session[:user_id])%>
+				<%= 'Welkom' + ' ' + @user = @current_user.first_name + ' ' + @current_user.last_name%></h1>
 			</div>
 	</header>
 

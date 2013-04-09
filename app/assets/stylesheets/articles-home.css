@@ -155,6 +155,16 @@ header{
 	margin: 0 auto;
 }
 
+#loggedin{
+	height: 30px;
+	width: 150px;
+	background-color: #e16565 ;
+	float: left;
+	color: #fff;
+	margin-right: 200px;
+	margin-top: 7px;
+}
+
 
 .boven{
 	height: 30px;

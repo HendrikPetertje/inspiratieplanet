@@ -5,10 +5,11 @@ Inspiratieplanet::Application.routes.draw do
 
   match '/register' => 'users#new'
 
+  resources :users
+
   resources :sessions, :only => [:new, :create, :destroy, :lastlogin]
   match 'login' => 'sessions#new'
   match 'logout' => 'sessions#destroy'
-  match 'signed' => 'users#show'
 
 
   # The priority is based upon order of creation:

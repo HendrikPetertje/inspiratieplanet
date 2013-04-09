@@ -14,13 +14,13 @@ class UsersController < ApplicationController
 
   	if @user.save
   		flash[:status] = true
-  		flash[:alert] = 'You succesfully signed in!'
+  		flash[:alert] = 'You succesfully registered!'
   	else
   		flash[:status] = false
   		flash[:alert] = @user.errors.full_messages
  	end
 
- 	redirect_to register_path
+ 	redirect_to articles_url
 
 	end
 end

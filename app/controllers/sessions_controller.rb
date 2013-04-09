@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
   		
   if user
   	session[:user_id] = user.id
-  	redirect_to :controller => 'users'
+  	redirect_to articles_url
 	
   else
   	flash[:status] = false
