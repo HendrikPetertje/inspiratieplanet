@@ -1,44 +1,26 @@
-<h1>Register</h1>
+<% provide(:title, 'Login') %>
+<h1>Sign up</h1>
 
-	<div>
-		<% if flash[:status] == true %>
-			<p><%= flash[:alert] %></p>
-		<% elsif flash[:status] == false %>
-			<% flash[:alert].each do |error| %>
-		<p><%= error %></p>
-		<% end %>
-	<% end %>
-</div>
+<div class="row">
+	<div class="span6 offset3">
 
-<%= form_for @user do |user| %>
 
-	<div>
-		<%= user.label(:first_name, "First Name") %><br/><br/>
-		<%= user.text_field :first_name, :placeholder => 'Naam' %>
-	</div>
-	
-	<div>
-		<%= user.label(:last_name, "Last Name") %><br/><br/>
-		<%= user.text_field :last_name, :placeholder => 'Achternaam' %>
-	</div>
+<%= form_for(@user) do |f| %>
+	<%= render 'shared/error_messages' %>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
 
-	<div>
-		<%= user.label(:password, "Password") %><br/><br/>
-		<%= user.password_field :password, :placeholder => 'Wachtwoord' %>
-	</div>
+	<%= f.label :email %>
+	<%= f.text_field :email %>
 
-	<div>
-		<%= user.label(:password_confirmation, "Password Confirmation") %><br/><br/>
-		<%= user.password_field :password_confirmation, :placeholder => 'Wachtwoord bevestiging' %>
-	</div>
+	<%= f.label :password %>
+	<%= f.password_field :password %>
 
-	<div>
-		<%= user.label(:email, "Email") %><br/><br/>
-		<%= user.text_field :email, :placeholder => 'E-mail adres' %>
-	</div>
+	<%= f.label :password_confirmation, "Confirmation" %>
+	<%= f.password_field :password_confirmation %>
 
-	<div>
-		<br/><%= submit_tag "Register" %>
-	</div>
-
+	<%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
 <% end %>
+	
+	</div>
+</div>

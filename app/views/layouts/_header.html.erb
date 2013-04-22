@@ -1,0 +1,20 @@
+<!--INLOGGEN ====================================-->
+<!--
+			<div id="inlog_wrapper">
+				<%= button_to 'Inloggen', '/login', :method => :get, :class => 'boven corner', :id => 'btn_inloggen' %>
+				<%= button_to 'Registeren', '/register', :method => :get, :class => 'boven corner', :id => 'registeren' %>
+				<%= button_to 'Logout', '/logout', :method => :get, :class => 'boven corner', :id => 'btn_logout' %>
+			</div>
+
+			<div id="loggedin">
+				
+				<% if @current_user %>
+
+				<% @current_user = User.find(session[:user_id]) %>
+
+				<%= 'Welkom' + ' ' + @user = @current_user.first_name + ' ' + @current_user.last_name %>
+				<% else %>
+				<% end %>
+
+			</div>
+-->

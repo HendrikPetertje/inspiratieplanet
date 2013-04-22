@@ -1,26 +1,22 @@
 class UsersController < ApplicationController
-  def index
-  end
 
   def show
+    @user = User.find(params[:id])
   end
 
- def new
-  	@user = User.new
+  def new
+    @user = User.new
   end
 
   def create
-  	@user = User.new(params[:user])
+    @user = User.new(params[:user])
 
-  	if @user.save
-  		flash[:status] = true
-  		flash[:alert] = 'You succesfully registered!'
-  	else
-  		flash[:status] = false
-  		flash[:alert] = @user.errors.full_messages
- 	end
-
- 	redirect_to articles_url
-
-	end
+    if @user.save
+      sign_in @user
+      flash[:succes] = "Welcome to the sample App!"
+      redirect_to @user
+    else
+    render 'new' 
+  end
+end
 end
