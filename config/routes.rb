@@ -1,8 +1,13 @@
 Inspiratieplanet::Application.routes.draw do
   resources :articles
+  resources :users
+  resources :sessions, only: [:new, :create, :destroy]
 
-root to: 'articles#index'
-
+  root to: 'articles#index'
+  
+  match '/register', to: 'users#new'
+  match '/login', to: 'sessions#new'
+  match '/logout', to: 'sessions#destroy', via: :delete
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
