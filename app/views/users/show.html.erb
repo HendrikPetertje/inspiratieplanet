@@ -1,30 +1,17 @@
 <% provide(:title, @user.name) %>
 
-<div class="row">
-	<aside class="span">
-		<section>
-
-			<h1>
-				<%= gravatar_for @user %>
-				<%= @user.name %>
-			</h1>
-
-			<%= button_to 'Afmelden', '/logout', :method => "delete", :class => 'boven corner', :id => 'btn_registeren' %>
-			<%= link_to "Settings", edit_user_path(current_user) %>
-	 
-		</section>
-	</aside>
-</div>
-
 		<div class="container tophead">
 			<div class="rightblock logout">
-				<a href="#"><img src="images/logoutbutton.png" alt="log out"></a>
+				<%= button_to 'Afmelden', '/logout', :method => "delete", :class => 'boven corner', :id => 'btn_registeren' %>
 			</div>
 			<div class="rightblock messagesbutton">
-				<a href="#"><img src="images/messagesbutton.png" alt=""></a>
+				<a href="#"><img src="/images/messagesbutton.png" alt=""></a>
+			</div>
+			<div class="rightblock optionsbutton">
+				<%= link_to "Settings", edit_user_path(current_user) %>
 			</div>
 			<div class="rightblock headeruserfield">
-				Huidige Gebruiker
+				<%= @user.name %>
 			</div>
 			<div class="cleardiv"></div>
 		</div>
@@ -32,12 +19,12 @@
 		<div class="container userdash-top">
 			
 			<div class="leftblock avatarblock">
-				<img src="images/avatar.png" alt="" />
+				<%= gravatar_for @user %>
 			</div>
 			
 			<div class="leftblock userinfo-container">
 				<div class="userinfo-name">
-					Huidige Gebruiker
+					<%= @user.name %>
 				</div>
 				<div class="userinfo-place" onclick="placearticle()">
 					Artikel plaatsen
