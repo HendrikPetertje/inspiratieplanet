@@ -8,6 +8,10 @@
 				<%= gravatar_for @user %>
 				<%= @user.name %>
 			</h1>
+
+			<%= button_to 'Afmelden', '/logout', :method => "delete", :class => 'boven corner', :id => 'btn_registeren' %>
+			<%= link_to "Settings", edit_user_path(current_user) %>
+	 
 		</section
 	</aside>
 </div>
