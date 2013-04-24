@@ -4,6 +4,7 @@ Inspiratieplanet::Application.routes.draw do
   resources :articles
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
+  resources :password_resets
 
   root to: 'articles#index'
   
