@@ -1,4 +1,6 @@
 Inspiratieplanet::Application.routes.draw do
+  get "password_resets/new"
+
   resources :articles
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
