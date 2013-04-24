@@ -35,10 +35,10 @@
 <div class="artikel_wrapper">
 	<div class="artikel corner">
 		<!-- <font class="artikel_1_img"> -->
-			<%= image_tag @articles.last.picture_url(:thumb) %>
+		<!--<%= image_tag @articles.last.picture_url(:thumb) %>!-->
 
 
-			<!--<img src="<%= @articles.last.picture %>" alt="Images" class="image1 corner flip">!-->
+			<img src="<%= @articles.last.picture_url(:thumb) %>" alt="Images" class="image1 corner flip">
 		<!-- </font> -->
 
 			<div class="artikel_tekst_1 artikel_tekst">
@@ -75,7 +75,7 @@
 	<div class="artikel corner">
 			<!--<img src="<%= @articles[-2].picture  %>" alt="Images" class="image2 corner">!-->
 			<%= image_tag @articles[-2].picture_url(:thumb) %>
-			
+
 			<div class="artikel_tekst_2 artikel_tekst">
 				<h3 class="title2"><%= @articles[-2].title %></h3>
 				<div class="article2"><p><%= @articles[-2].content %></p></div>
@@ -108,7 +108,7 @@
 <div class="artikel_wrapper">
 	<div class="artikel corner">
 			<!--<img src="<%= @articles[-4].picture  %>" alt="Images" class="image4 corner">!-->
-			<%= image_tag @articles[-4].picture_url(:thumb) %>
+			<%= image_tag @articles[-4].picture_url(:thumb)%>
 
 			<div class="artikel_tekst_4 artikel_tekst">
 				<h3 class="title4"><%= @articles[-4].title %></h3>
