@@ -39,3 +39,9 @@ end
 group :production do
   gem 'pg', '0.12.2'
 end
+
+# image management
+gem 'carrierwave'
+gem 'mini_magick'
+# ftp storage of images
+gem 'carrierwave-ftp'
