@@ -35,7 +35,8 @@ Inspiratieplanet::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
 
-  # make the host for the mailer our own localhost instead of a fancy webserver
-  config.action_mailer.default_url_options = { :host => "localhost:3000" }
-  
+  # Define host for mailer
+   config.action_mailer.default_url_options = { :host => "localhost:1025" }
+   config.action_mailer.smtp_settings = { :address => "localhost", :port => 1025 }
+   config.action_mailer.delivery_method = :smtp
 end
