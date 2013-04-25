@@ -35,11 +35,11 @@ $(function() {
 			console.log(random_item_5);
 
 			//Replace the images
-			$('.image1').attr("src", random_item_1.picture);
-			$('.image2').attr("src", random_item_2.picture);
-			$('.image3').attr("src", random_item_3.picture);
-			$('.image4').attr("src", random_item_4.picture);
-			$('.image5').attr("src", random_item_5.picture);
+			$('.image1').attr("src", random_item_1.picture.thumb.url);
+			$('.image2').attr("src", random_item_2.picture.thumb.url);
+			$('.image3').attr("src", random_item_3.picture.thumb.url);
+			$('.image4').attr("src", random_item_4.picture.thumb.url);
+			$('.image5').attr("src", random_item_5.picture.thumb.url);
 
 			//replace texts
 			$('.article1').empty().append('<p>' + random_item_1.content + '</p>');
