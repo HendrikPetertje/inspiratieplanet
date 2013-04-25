@@ -14,4 +14,8 @@
 /log/*.log
 /tmp
 
+<<<<<<< HEAD
 .DS_Store
+=======
+.DS_Store
+>>>>>>> ignore ds_store
