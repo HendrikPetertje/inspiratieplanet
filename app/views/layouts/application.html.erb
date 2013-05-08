@@ -7,16 +7,35 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<!-- Notification system -->
+	<% if flash[:notice] %>
+		<div id="flash_notice"><%= flash[:notice] %></div>
+	<% end %>
 
-		<div class="container">
+	<% if flash[:error] %>
+		<div id="flash_error"><%= flash[:error] %></div>
+	<% end %>
 
-		<% flash.each do |key, value| %>
-			<% content_tag(:div, value, class: "alert alert-#{key}") %>
-		<% end %>
-		<%= yield %>
+	<% if flash[:alert] %>
+		<div id="flash_alert"><%= flash[:alert] %></div>
+	<% end %>
+	
+	<!-- page system -->
+	<div class="container">
 
-		<%= debug(params) if Rails.env.development? %>
-		</div>
+	<% if user_signed_in? %>
+	  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
+	<% else %>
+	  <%= link_to('Login', new_user_session_path)  %>  
+	<% end %>
+
+	<% flash.each do |key, value| %>
+		<% content_tag(:div, value, class: "alert alert-#{key}") %>
+	<% end %>
+	<%= yield %>
+
+	<%= debug(params) if Rails.env.development? %>
+	</div>
 
 </body>
 </html>
