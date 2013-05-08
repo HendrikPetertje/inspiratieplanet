@@ -5,7 +5,11 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  # make username required on register and edit and block out users that try to ommit this.
+  validates_presence_of :name
+  validates_uniqueness_of :name
+
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me
+  attr_accessible :email, :password, :password_confirmation, :name, :picture, :remember_me
   # attr_accessible :title, :body
 end
