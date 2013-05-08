@@ -1,16 +1,7 @@
 Inspiratieplanet::Application.routes.draw do
-  get "password_resets/new"
-
   resources :articles
-  resources :users
-  resources :sessions, only: [:new, :create, :destroy]
-  resources :password_resets
 
   root to: 'articles#index'
-  
-  match '/register', to: 'users#new'
-  match '/login', to: 'sessions#new'
-  match '/logout', to: 'sessions#destroy', via: :delete
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
