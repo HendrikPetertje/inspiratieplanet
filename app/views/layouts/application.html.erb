@@ -21,21 +21,22 @@
 	<% end %>
 	
 	<!-- page system -->
-	<div class="container">
 
-	<% if user_signed_in? %>
-	  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-	<% else %>
-	  <%= link_to('Login', new_user_session_path)  %>  
-	<% end %>
+	<div id= "main" class="container">
+		<div id="header" class="container">
+				<% if user_signed_in? %>
+				  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+				<% else %>
+				  <%= link_to('Login', new_user_session_path)  %>  
+				<% end %>
+		</div>
 
-	<% flash.each do |key, value| %>
-		<% content_tag(:div, value, class: "alert alert-#{key}") %>
-	<% end %>
-	<%= yield %>
-
-	<%= debug(params) if Rails.env.development? %>
+		<%= yield %>
+		<div id="footer" class ="container">
+			<p>Geeninspiratie.nl, de site met 10000+ inspiratietips, idee&euml;n, unieke links en meer!</p>
+		</div>
 	</div>
+	<%= debug(params) if Rails.env.development? %>
 
 </body>
 </html>

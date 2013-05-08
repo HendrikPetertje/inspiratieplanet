@@ -1,0 +1,328 @@
+div, body, button, h3, p, header, h1, input, select, option{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+
+/*Basic spore-----------------------------------------------------------------------------------*/
+body{
+	height: 100%;
+}
+
+#spore_wrapper{
+	height: 100%;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+}
+
+#spore_container{
+	width: 100px;
+	height: 100%;
+	border-right: solid 5px #f19999;  
+	position: relative;
+	float: left;
+	background-color: #ffffff;
+}
+
+#btn_container{
+	height: 100%;
+	width: 20px;
+	position: relative;
+	background-color: #ffffff;
+	float: left;
+}
+
+#btn_spore{
+	background-image: url(/images/btn_spore.png);
+   	background-color: transparent;
+   	border: none;
+   	padding-left: 32px;
+   	cursor: pointer;
+   	position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 32%;
+    height: 33px;
+    margin: auto;
+}
+
+
+#btn_spore:hover{
+	background-image: url(/images/btn_spore_hover.png);
+}
+.spore_item{
+	width: 70px;
+	height: 70px;
+	margin: 0 auto;
+	margin-top: 10px;
+	background-color:#99bef1;
+
+}
+
+.spore_item:hover{
+	background-color: #729bd3;
+}
+
+.corner{
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+}
+
+/*Baric artikel====================================================================*/
+
+#wrapper{
+
+	width: 800px;
+	margin: 0 auto;
+
+}
+
+.artikel{
+	width: 240px;
+	height: 240px;
+	display: inline-block; 
+	overflow: hidden;
+	background-color: #c999f1;
+	border-bottom: solid 2px #732d2e;
+	border-right: solid 2px #732d2e;
+}
+
+
+
+.artikel img{
+	cursor: pointer;
+}
+
+.artikel_tekst{
+	width: 240px;
+	height: 240px;
+}
+
+
+
+.artikel_wrapper{
+	width: 240px;
+	height: 240px;
+	margin: 20px 0px 0px 20px;
+	display: inline-block; 
+}
+
+.artikel h3{
+		padding-top: 10px;
+		padding: 10px 10px 5px 10px;
+		background-color: #ffffff;	
+}
+
+.artikel p{
+	height: 150px;
+	font-size: 0.9em;
+	overflow: hidden;
+	padding: 10px 10px 5px 10px;
+}
+
+/*Open artikel==================================================================*/
+.open_artikel{
+	height: 40px;
+	width: 240px;
+	border: none;
+	font-size: 0.9em;
+	color: #ffffff;
+	background-color: #a580c3;
+	padding-top: 5px;
+	cursor: pointer;
+}
+
+.open_artikel:hover{
+	color: #a580c3;
+	background-color: #ffffff;
+}
+
+.open_artikel:active{
+	color: #ffffff;
+background-color: #8f71a8;
+}
+
+/*HEADER======================================================================*/
+
+header{
+	padding-left:310px;
+	width: 544px;
+	height: 40px;
+	margin: 0 auto;
+}
+
+
+.boven{
+	height: 30px;
+	width: 115px;
+	border: none;
+	border-bottom: solid 2px #732d2e;
+	border-right: solid 2px #732d2e;
+	background-color: #e16565;
+	color:#ffffff;
+	margin-top: 5px;
+	float: left;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.boven:hover{
+	color: #e16565;
+	background-color: #ffffff;
+}
+
+.boven:active{
+	border: none;
+}
+
+#btn_inloggen{
+	margin-right: 10px;
+}
+
+#btn_registreren{
+	margin-right: 15px;
+}
+
+/*RAONDOM ======================================================================*/
+
+#random_btn{
+	display: block;
+}
+
+#random_1{
+	width: 240px;
+	height: 240px;
+	display: inline-block; 
+	overflow: hidden;
+	background-color: #e16565;
+	border-bottom: solid 2px #732d2e;
+	border-right: solid 2px #732d2e;
+}
+
+#random_button_wrapper{
+	width: 240px;
+	height: 240px;
+}
+
+#random_button_wrapper p{
+	height: 125px;
+}
+
+#random_button_wrapper h3{
+	text-align: center;
+	font-weight: bolder;
+}
+
+#random_btn{
+	height: 120px;
+	width: 120px;
+	margin: 0 auto;
+	border: 5px solid #ffffff;
+	font-size: 30px;
+	font-weight: lighter;
+	font-style: italic;
+	font-family: serif;
+	color: #ffffff;
+	background-color: #f19999;
+	cursor: pointer;
+	-webkit-border-radius: 90px;
+	-moz-border-radius: 90px;
+	border-radius: 90px;
+}
+
+#random_btn:active{
+	background-color: #732d2e;
+}
+
+#random_btn:hover{
+	color: #f19999;
+	background-color: #ffffff;
+}
+#zoeken{
+	height: 30px;
+	width: 220px;
+	margin-left: 10px;
+	margin-bottom: 2px;
+	text-align: center;
+	border: solid 2px #e16565; 
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+}
+
+select{
+	height: 30px;
+	width: 220px;
+	margin-left: 10px;
+	border: solid 2px #e16565; 
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+}
+
+/*artikel bekijk====================================================================*/
+
+#artikel_bekijken{
+		width: 751px;
+		margin-left: 20px;
+		margin-top: 20px;
+		background-color: #ffffff;
+		padding: 10px;
+		border-top: 1px solid #f1cf99;
+		border-left: 1px solid #f1cf99;
+		border-bottom: solid 2px #732d2e;
+		border-right: solid 2px #732d2e;
+}
+#artikel_bekijken h3{
+border-bottom: solid 1px #f1cf99;
+margin-bottom: 10px;
+}
+
+#artikel_bekijken p{
+	margin-bottom: 10px;
+}
+
+#text{
+	width: 494px;
+	display: inline-block;
+}
+
+
+
+#artikel_bekijken img{
+	margin-left: 10px;
+	display: inline-block;
+}
+/*Typografie====================================================================*/
+p{
+	font-size: 0.9em;
+}
+
+a{
+	color:#E16565;
+	font-size: 0.9em;
+}
+
+h3{
+	color: #e16565;
+	font-weight: lighter;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
