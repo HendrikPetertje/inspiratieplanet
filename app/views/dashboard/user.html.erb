@@ -28,47 +28,21 @@
 <!--Articles============================================================!-->
 
 <div id="articles" class="container">
+	<% @articles.each do |article| %>
+		<div class="article_block">
+			<img class="article_tile" src="" alt="images">
 
-	<div class="article_block">
-		<img class="article_tile" src="" alt="images">
-
-			<div class="text_wrapper">
-				<h3>Titel</h3>
-				<p class="article_text">
-				Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa.
-				</p>
-			</div>
-	</div>
-	
-
-	<div class="article_block">
-		<img class="article_tile" src="" alt="images">
-			<div class="text_wrapper">
-				<h3>Titel</h3>
-				<p class="article_text">
-				Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
-				</p>
-			</div>
-	</div>
-
-	<div class="article_block">
-		<img class="article_tile" src="" alt="images">
-			<div class="text_wrapper">
-				<h3>Titel</h3>
-				<p class="article_text">
-				Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
-				</p>
-			</div>
-	</div>
-
-	<div class="article_block" class="block_last">
-		<img class="article_tile" src="" alt="images">
-			<div class="text_wrapper">
-				<h3>Titel</h3>
-				<p class="article_text">
-				Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa.
-				</p>
-			</div>
-	</div>
+				<div class="text_wrapper">
+					<h3><%= article.title %></h3>
+					<div class="article_text">
+					<%= truncate(article.content, :length => 150, :separator => ' ') %>
+					</div>
+					<%= article.created_at %>
+					<%= link_to 'Show', article %>
+					<%= link_to 'Edit', edit_article_path(article) %>
+					<%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %>
+				</div>
+		</div>
+	<% end %>
 
 </div>

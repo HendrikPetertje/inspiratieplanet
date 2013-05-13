@@ -15,6 +15,7 @@ class ArticlesController < ApplicationController
   # GET /articles/1.json
   def show
     @article = Article.find(params[:id])
+    @userName = @article.user.name
 
     respond_to do |format|
       format.html # show.html.erb
@@ -26,6 +27,7 @@ class ArticlesController < ApplicationController
   # GET /articles/new.json
   def new
     @article = Article.new
+    @article.user_id = current_user.id
 
     respond_to do |format|
       format.html # new.html.erb
