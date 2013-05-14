@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   # link articles with users
   has_many :articles
+  has_many :favorites
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable

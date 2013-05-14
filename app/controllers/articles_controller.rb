@@ -16,7 +16,7 @@ class ArticlesController < ApplicationController
   def show
     @article = Article.find(params[:id])
     @userName = @article.user.name
-
+    @showheart = Favorite.exists?(:user_id => current_user.id, :article_id => @article.id)
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @article }
@@ -27,7 +27,6 @@ class ArticlesController < ApplicationController
   # GET /articles/new.json
   def new
     @article = Article.new
-    @article.user_id = current_user.id
 
     respond_to do |format|
       format.html # new.html.erb
@@ -44,7 +43,8 @@ class ArticlesController < ApplicationController
   # POST /articles.json
   def create
     @article = Article.new(params[:article])
-
+    @article.user_id = current_user.id
+    
     respond_to do |format|
       if @article.save
         format.html { redirect_to @article, notice: 'Article was successfully created.' }

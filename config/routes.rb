@@ -1,4 +1,7 @@
 Inspiratieplanet::Application.routes.draw do
+  resources :favorites
+
+
   get "dashboard/user"
 
   devise_for :users
