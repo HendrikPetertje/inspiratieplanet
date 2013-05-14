@@ -1,13 +1,12 @@
 Inspiratieplanet::Application.routes.draw do
-  resources :favorites
-
-
   get "dashboard/user"
 
   devise_for :users
   resources :articles
+  resources :favorites
 
   root to: 'articles#index'
+  match "/favorites/:article_id" => "favorites#create", :as => :favorite
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

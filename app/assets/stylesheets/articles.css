@@ -1,0 +1,13 @@
+.favoritebutton {
+	width: 16px;
+	height: 16px;
+	cursor: pointer;
+	background: url(/images/heart-false.png) no-repeat;
+}
+
+.unfavoritebutton {
+	width: 16px;
+	height: 16px;
+	cursor: pointer;
+	background: url(/images/heart-true.png) no-repeat;
+}

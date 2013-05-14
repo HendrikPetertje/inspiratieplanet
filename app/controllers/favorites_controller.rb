@@ -10,49 +10,13 @@ class FavoritesController < ApplicationController
     end
   end
 
-  # GET /favorites/1
-  # GET /favorites/1.json
-  def show
-    @favorite = Favorite.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @favorite }
-    end
-  end
-
-  # GET /favorites/new
-  # GET /favorites/new.json
-  def new
-    @favorite = Favorite.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @favorite }
-    end
-  end
-
-  # GET /favorites/1/edit
-  def edit
-    @favorite = Favorite.find(params[:id])
-  end
-
-  # POST /favorites
-  # POST /favorites.json
   def create
-    @favorite = Favorite.new(params[:favorite])
-
-    respond_to do |format|
-      if @favorite.save
-        format.html { redirect_to @favorite, notice: 'Favorite was successfully created.' }
-        format.json { render json: @favorite, status: :created, location: @favorite }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @favorite.errors, status: :unprocessable_entity }
-      end
-    end
+    current_user.favorites.create(:article_id => params[:article_id])
+    render :layout => false
   end
 
+  def show
+  end
   # PUT /favorites/1
   # PUT /favorites/1.json
   def update

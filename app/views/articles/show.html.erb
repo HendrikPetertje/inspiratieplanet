@@ -51,8 +51,15 @@
 	</div>
 	<div class="userfield">
 		user<br>
-		<%= @userName %><br>
+		<%= @userName %><br>		
+	</div>
+	<div class="favorite-container">
 		
+		<% if @showheart %>
+			<div class='unfavoritebutton' id='<%= @article.id %>'></div>
+		<% else %>
+			<div class='favoritebutton' id='<%= @article.id %>'></div>
+		<% end %>
 	</div>
 	
 </div>
