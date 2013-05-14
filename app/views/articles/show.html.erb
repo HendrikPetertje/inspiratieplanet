@@ -52,13 +52,7 @@
 	<div class="userfield">
 		user<br>
 		<%= @userName %><br>
-		<% if @showheart %>
-			is al favoriet
-		<% else %>
-			<%= link_to 'favoriet maken', {:controller => "favorites", :action => "create"}, :method => "post" %><br>
-			
-		<% end %><br>
-		<%= current_user.id %> en <%= @article.id %>
+		
 	</div>
 	
 </div>
