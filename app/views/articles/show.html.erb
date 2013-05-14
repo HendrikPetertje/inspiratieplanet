@@ -53,5 +53,33 @@
 		user<br>
 		<%= @userName %>
 	</div>
+
+	<% @article.reviews.each do |review| %>
+
+		<hr><b><%= review.title %></b><br/><br/>
+
+		<%= review.content %><br/><br/>
+		<%= current_user.name + " || " + time_ago_in_words(review.created_at) %> ago
+	<% end %>
+	
+	</div>
 </div>
+
+<hr><hr>
+
+	<h1>Wat vind jij van dit artikel?</h1><br/>
+
+	<%= form_for([@article, @article.reviews.build]) do |f| %>
+
+	  <div class="field">
+	    <%= f.label :title %><br />
+	    <%= f.text_field :title %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :content %><br />
+	    <%= f.text_area :content %>
+	  </div>
+	  <div class="actions">
+    <%= f.submit %>
+    <% end %> 
 </div>

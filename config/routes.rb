@@ -1,8 +1,12 @@
 Inspiratieplanet::Application.routes.draw do
+  resources :articles do
+    resources :reviews 
+  end
   get "dashboard/user"
 
   devise_for :users
-  resources :articles
+  
+
 
   root to: 'articles#index'
 
