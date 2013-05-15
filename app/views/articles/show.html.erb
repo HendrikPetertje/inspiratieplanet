@@ -57,7 +57,7 @@
 		
 		<% if @showheart %>
 			<div class='unfavoritebutton' id='<%= @article.id %>'></div>
-		<% else %>
+		<% elsif user_signed_in? %>
 			<div class='favoritebutton' id='<%= @article.id %>'></div>
 		<% end %>
 	</div>

@@ -6,7 +6,9 @@ Inspiratieplanet::Application.routes.draw do
   resources :favorites
 
   root to: 'articles#index'
-  match "/favorites/:article_id" => "favorites#create", :as => :favorite
+  match "/login" => "/users/sign_in"
+  match "/favorites/add/:article_id" => "favorites#create", :as => :favorite
+  match "/favorites/destroy/:article_id" => "favorites#destroy"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

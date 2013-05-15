@@ -4,7 +4,7 @@ $(document).ready(function() {
 	  var article_id = $(this).attr('id');
 	  $.ajax({
 	    type: "POST",
-	    url: '/favorites/' + article_id,
+	    url: '/favorites/add/' + article_id,
 	    success: function() {
 	      $(".favorite-container").empty().append("<div class='unfavoritebutton' id='<%= @article.id %>'></div>")
 	    },
@@ -14,12 +14,11 @@ $(document).ready(function() {
 	$(".unfavoritebutton").click(function() {
 	  var article_id = $(this).attr('id');
 	  $.ajax({
-	    type: "DESTROY",
-	    url: '/favorites/' + article_id,
+	    type: "post",
+	    url: '/favorites/destroy/' + article_id,
 	    success: function() {
 	      $(".favorite-container").empty().append("<div class='favoritebutton' id='<%= @article.id %>'></div>")
 	    },
 	  })
 	})
 })
-
