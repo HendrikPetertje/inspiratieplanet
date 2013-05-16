@@ -14,8 +14,8 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :name
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :name, :picture, :remember_me
+  attr_accessible :email, :password, :password_confirmation, :name, :avatar, :remember_me
   # attr_accessible :title, :body
-  mount_uploader :picture, PictureUploader
+  mount_uploader :avatar, PictureUploader
 
 end

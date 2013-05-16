@@ -7,7 +7,7 @@
   <%= f.text_field :name, :autofocus => true %></div>
 
   <div><%= f.label :email %><br />
-  <%= f.email_field :email, :autofocus => true %></div>
+  <%= f.email_field :email %></div>
 
   <div><%= f.label :password %><br />
   <%= f.password_field :password %></div>
@@ -15,8 +15,8 @@
   <div><%= f.label :password_confirmation %><br />
   <%= f.password_field :password_confirmation %></div>
 
-  <div><%= f.label :picture %><br />
-  <%= f.file_field :picture, :autofocus => true %></div>
+  <div><%= f.label :avatar %><br />
+  <%= f.file_field :avatar %></div>
 
   <div><%= f.submit "Sign up" %></div>
 <% end %>
