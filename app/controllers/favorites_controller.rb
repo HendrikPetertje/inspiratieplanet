@@ -19,7 +19,7 @@ class FavoritesController < ApplicationController
   end
 
   def destroy
-    current_user.favorites.destroy(:article_id => params[:article_id])
+    current_user.favorites.where(:article_id => params[:article_id]).first.destroy
     render :layout => false
   end
 end

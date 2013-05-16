@@ -6,7 +6,7 @@ Inspiratieplanet::Application.routes.draw do
   resources :favorites
 
   root to: 'articles#index'
-  match "/login" => "/users/sign_in"
+  match "/login" => "users#sign_in"
   match "/favorites/add/:article_id" => "favorites#create", :as => :favorite
   match "/favorites/destroy/:article_id" => "favorites#destroy"
 
