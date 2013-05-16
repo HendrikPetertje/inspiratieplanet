@@ -1,9 +1,11 @@
 Inspiratieplanet::Application.routes.draw do
-  get "dashboard/user"
-
+  resources :articles do
+    resources :reviews 
+  end
   devise_for :users
-  resources :articles
   resources :favorites
+  
+  get "dashboard/user"
 
   root to: 'articles#index'
   match "/login" => "users#sign_in"
