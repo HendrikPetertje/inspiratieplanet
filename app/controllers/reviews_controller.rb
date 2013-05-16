@@ -4,9 +4,9 @@ class ReviewsController < ApplicationController
   # GET /reviews.json
   
   def create
-    @article = Article.find(params[:article_id])
-    @review = @article.reviews.create(params[:review])
-
+   @article = Article.find(params[:article_id])
+   @review = @article.reviews.create(params[:review])
+    
     redirect_to article_path(@article)
 
   end
@@ -14,12 +14,11 @@ class ReviewsController < ApplicationController
   # DELETE /reviews/1
   # DELETE /reviews/1.json
   def destroy
-    @review = Review.find(params[:id])
+    @article = Article.find(params[:article_id])
+    @review = @article.reviews.find(params[:id])
     @review.destroy
 
-    respond_to do |format|
-      format.html { redirect_to reviews_url }
-      format.json { head :no_content }
+    redirect_to article_path(@article)
     end
-  end
 end
+

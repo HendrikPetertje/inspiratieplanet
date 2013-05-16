@@ -56,10 +56,18 @@
 
 	<% @article.reviews.each do |review| %>
 
+		<%= image_tag @article.picture_url(:thumb) %>
 		<hr><b><%= review.title %></b><br/><br/>
 
 		<%= review.content %><br/><br/>
-		<%= current_user.name + " || " + time_ago_in_words(review.created_at) %> ago
+		<%= review.user.name + " || " + time_ago_in_words(review.created_at)%> ago ||
+		<% if review.user_id == current_user.id %>
+		<%= link_to 'Verwijderen', article_review_path(review.article, review), 
+				 		:confirm => "Weet u zeker dat u deze comment wil verwijderen?",
+				 			:method => :delete  %>
+		<% else %>
+		
+		<% end %> 
 	<% end %>
 	
 	</div>
@@ -70,6 +78,8 @@
 	<h1>Wat vind jij van dit artikel?</h1><br/>
 
 	<%= form_for([@article, @article.reviews.build]) do |f| %>
+
+		<%= f.hidden_field :user_id, :value => current_user.id %>
 
 	  <div class="field">
 	    <%= f.label :title %><br />

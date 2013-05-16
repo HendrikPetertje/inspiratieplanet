@@ -1,4 +1,7 @@
 class Review < ActiveRecord::Base
   belongs_to :article
-  attr_accessible :author, :content, :rating, :title
+  belongs_to :user
+  attr_accessible :author, :content, :rating, :title, :article_id, :review, :user_id
+
+  validates :user_id, :presence => true
 end

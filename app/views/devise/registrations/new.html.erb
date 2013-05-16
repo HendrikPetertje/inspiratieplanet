@@ -4,7 +4,7 @@
   <%= devise_error_messages! %>
 
   <div><%= f.label :name %><br />
-  <%= f.email_field :name, :autofocus => true %></div>
+  <%= f.text_field :name, :autofocus => true %></div>
 
   <div><%= f.label :email %><br />
   <%= f.email_field :email, :autofocus => true %></div>
@@ -16,7 +16,7 @@
   <%= f.password_field :password_confirmation %></div>
 
   <div><%= f.label :picture %><br />
-  <%= f.email_field :picture, :autofocus => true %></div>
+  <%= f.file_field :picture %></div>
 
   <div><%= f.submit "Sign up" %></div>
 <% end %>
