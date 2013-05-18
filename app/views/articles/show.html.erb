@@ -69,10 +69,10 @@
 
 		<%= review.content %><br/><br/>
 		<%= review.user.name + " || " + time_ago_in_words(review.created_at)%> ago ||
-		<% if review.user_id == current_user.id %>
-		<%= link_to 'Verwijderen', article_review_path(review.article, review), 
-				 		:confirm => "Weet u zeker dat u deze comment wil verwijderen?",
-				 			:method => :delete  %>
+		<% if user_signed_in? && review.user_id == current_user.id %>
+				<%= link_to 'Verwijderen', article_review_path(review.article, review), 
+						 		:confirm => "Weet u zeker dat u deze comment wil verwijderen?",
+						 			:method => :delete  %>
 		<% else %>
 		
 		<% end %> 

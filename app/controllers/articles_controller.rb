@@ -76,8 +76,19 @@ class ArticlesController < ApplicationController
   # DELETE /articles/1
   # DELETE /articles/1.json
   def destroy
-    @article = Article.find(params[:id])
-    @article.destroy
+    # verwijder gebruiker
+    # @article = Article.find(params[:id])
+    # @article.destroy
+    
+    # Remove favorites linked to the article
+    if @artcile.favorites.inculde?(@artcile.favorites.article_id)
+      u_fav = @article.favorites
+      u_fav.each do |favorite|
+        favorite.destroy
+      end
+    end
+
+    # remove reviews linked to the article
 
     respond_to do |format|
       format.html { redirect_to articles_url }
