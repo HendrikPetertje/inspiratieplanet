@@ -17,5 +17,6 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :name, :avatar, :remember_me
   # attr_accessible :title, :body
   mount_uploader :avatar, PictureUploader
+  validates :avatar, :presence => true
 
 end

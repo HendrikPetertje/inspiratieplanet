@@ -3,6 +3,7 @@
 require 'mini_magick'
 require 'carrierwave/storage/ftp' # FTP only
 
+
  CarrierWave.configure do |config|
   config.ftp_host = "kaboomreclame.nl"
   config.ftp_port = 21
