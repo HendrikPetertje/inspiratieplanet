@@ -101,4 +101,24 @@ class ArticlesController < ApplicationController
     
   end
 
+  def accept
+    @article = Article.find(params[:id])
+    if current_user.admin?
+      @article.update_attribute(:accepted, true)
+      redirect_to '/dashboard/admin'
+    else
+      redirect_to @article, notice: 'U hebt geen toegang tot de acceptatie-pagina'
+    end
+  end
+
+  def reject
+    @article = Article.find(params[:id])
+    if current_user.admin?
+      @article.update_attribute(:accepted, false)
+      redirect_to '/dashboard/admin'
+    else
+      redirect_to @article, notice: 'U hebt geen toegang tot de weiger-pagina'
+    end
+  end
+
 end

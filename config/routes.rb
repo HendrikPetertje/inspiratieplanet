@@ -9,6 +9,14 @@ Inspiratieplanet::Application.routes.draw do
   get "dashboard/user"
   get "dashboard/manage_user"
 
+  resources :articles do
+      member do
+         get :accept
+         put :accept
+         get :reject
+         put :reject
+      end   
+  end
 
   root to: 'articles#index'
   match "/login" => "users#sign_in"

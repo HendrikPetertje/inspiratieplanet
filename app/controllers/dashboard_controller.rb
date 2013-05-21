@@ -6,7 +6,11 @@ before_filter :authenticate_user!
   end
 
   def admin
+  	if current_user.admin
   	 @falsearticles = Article.find(:all, :conditions => { :accepted => false })
+  	else
+  	 redirect_to '/dashboard/user', notice: 'U bent geen admin'
+  	end
   end
 
   def manage_user

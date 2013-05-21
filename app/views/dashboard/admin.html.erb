@@ -1,7 +1,7 @@
 <h1>Artikelen voor goedkeuring</h1>
 <% @falsearticles.each do |article| %>
 	<div class="article_block">
-		<img class="article_tile" src="" alt="images">
+		<img class="article_tile" src="<%= article.picture_url(:thumb) %>" alt="images">
 
 			<div class="text_wrapper">
 				<h3><%= article.title %></h3>
@@ -12,6 +12,7 @@
 				<%= link_to 'Bekijken', article %>
 				<%= link_to 'Bewerken', edit_article_path(article) %>
 				<%= link_to 'Verwijderen', article, method: :delete, data: { confirm: 'Dit artikel verwijderen?' } %>
+				<%= link_to "Goedkeuren", accept_article_path(article), method: :put %>
 			</div>
 	</div>
 <% end %>
