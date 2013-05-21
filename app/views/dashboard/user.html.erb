@@ -27,6 +27,7 @@
 <!--Articles============================================================!-->
 
 <div id="articles" class="container">
+	
 	<% @articles.each do |article| %>
 		<div class="article_block">
 			<img class="article_tile" src="" alt="images">
@@ -41,7 +42,9 @@
 					<%= link_to 'Edit', edit_article_path(article) %>
 					<%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %>
 				</div>
+				ww
 		</div>
-	<% end %>
 
+	<% end %>
 </div>
+
