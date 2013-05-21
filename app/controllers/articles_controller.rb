@@ -3,7 +3,8 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.all
+    @articles = Article.find(:all, :conditions => { :accepted => true })
+    # uit eindelijke limiet is 16
     @randomarticle = Article.all(:order => "RANDOM()", :limit => 5)
      respond_to do |format|
       format.html # index.html.erb

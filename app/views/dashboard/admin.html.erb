@@ -1,1 +1,17 @@
-hoi
+<h1>Artikelen voor goedkeuring</h1>
+<% @falsearticles.each do |article| %>
+	<div class="article_block">
+		<img class="article_tile" src="" alt="images">
+
+			<div class="text_wrapper">
+				<h3><%= article.title %></h3>
+				<div class="article_text">
+				<%= truncate(article.content, :length => 150, :separator => ' ') %>
+				</div>
+				<%= article.created_at %><br />
+				<%= link_to 'Bekijken', article %>
+				<%= link_to 'Bewerken', edit_article_path(article) %>
+				<%= link_to 'Verwijderen', article, method: :delete, data: { confirm: 'Dit artikel verwijderen?' } %>
+			</div>
+	</div>
+<% end %>

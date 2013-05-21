@@ -6,6 +6,7 @@ before_filter :authenticate_user!
   end
 
   def admin
+  	 @falsearticles = Article.find(:all, :conditions => { :accepted => false })
   end
 
   def manage_user
