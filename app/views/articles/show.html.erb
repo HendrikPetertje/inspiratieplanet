@@ -68,6 +68,7 @@
 		<hr><b><%= review.title %></b><br/><br/>
 
 		<%= review.content %><br/><br/>
+		<img src="<%= review.user.avatar_url(:microthumb) %>"
 		<%= review.user.name + " || " + time_ago_in_words(review.created_at)%> ago ||
 		<% if user_signed_in? && review.user_id == current_user.id %>
 				<%= link_to 'Verwijderen', article_review_path(review.article, review), 
