@@ -53,18 +53,17 @@
 		user<br>
 		<%= @userName %>
 	</div>
-	<div class="favorite-container">
+	<div class="favorite-container" id='<%= @article.id %>'>
 		
 		<% if @showheart %>
-			<div class='unfavoritebutton' id='<%= @article.id %>'></div>
+			<div class='unfavoritebutton'></div>
 		<% elsif user_signed_in? %>
 			<div class='favoritebutton' id='<%= @article.id %>'></div>
 		<% end %>
-
-		<% if user_signed_in? && current_user.admin? && @article.accepted %>
+	</div>
+	<% if user_signed_in? && current_user.admin? && @article.accepted %>
 			<%= link_to "Afkeuren", reject_article_path(@article), method: :put %>
 		<% end %>
-	</div>
 
 	<% @article.reviews.each do |review| %>
 
