@@ -5,7 +5,10 @@ Inspiratieplanet::Application.routes.draw do
   devise_for :users
   resources :favorites
   
+  get "dashboard/admin"
   get "dashboard/user"
+  get "dashboard/manage_user"
+
 
   root to: 'articles#index'
   match "/login" => "users#sign_in"
