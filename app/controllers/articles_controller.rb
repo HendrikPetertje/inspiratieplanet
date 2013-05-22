@@ -39,6 +39,14 @@ class ArticlesController < ApplicationController
   # GET /articles/1/edit
   def edit
     @article = Article.find(params[:id])
+    if current_user.id == @article.user_id
+      @article = Article.find(params[:id])
+    elsif current_user.admin?
+      @article = Article.find(params[:id])
+    else
+      @article = Article.find(params[:id])
+      redirect_to @article, notice: 'U kunt dit artikel niet bewerken.'
+    end
   end
 
   # POST /articles
