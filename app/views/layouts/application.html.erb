@@ -1,43 +1,170 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Inspiratieplanet</title>
+  <title>Geen Inspiratie</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
 </head>
-<body>
-	<!-- Notification system -->
-	<% if flash[:notice] %>
-		<div id="flash_notice"><%= flash[:notice] %></div>
-	<% end %>
+<body onload="setupCollums();">
+<!-- Header responsife gemaakt-->
+	<div id="header_wrapper">
+		<header class="header">
+			<div class="logo">
+			
+			<h1><img src="images/logo.png"> GeenInspiratie</h1>
+			<a href="#" class="nav-menu-btn_2">Menu</a>
+			</div>
 
-	<% if flash[:error] %>
-		<div id="flash_error"><%= flash[:error] %></div>
-	<% end %>
+			<ul class="nav-left">
+				<li><a href="#" class="nav-menu-btn">Menu</a>
+					<!--Dropdown-->
+					<ul class="navleft-dropdown">
 
-	<% if flash[:alert] %>
-		<div id="flash_alert"><%= flash[:alert] %></div>
-	<% end %>
+						<li class="Artikel_toevoegen_2"><a href="#" >Artikel Toevoegen</a></li>
+						<li class="in-uitloggen_2"><a href="#">Inloggen <!-- uitloggen --> </a></li>
+						<li class="gebuiker_2"><a href="#">Lotje2001 <!-- Allen bij inloogen --> </a></li>
+
+
+						<li><a href="#">Over Ons</a></li>
+						<li><a HREF="#">Contact</A></li>
+
+					</ul>
+
+				</li>
+
+			</ul>
+
+			<ul class="nav-right">
+				
+				<li><a href="#" class="message">
+						<em>
+							10
+
+						</em>
+
+				</a></li>
+				
+				<li class="in-uitloggen"><a href="#">Inloggen <!-- uitloggen --> </a></li>
+				<li class="gebuiker"><a href="#">Lotje2001 <!-- Allen bij inloogen --> </a></li>
+				<li class="Fleft"><a href="#" >Artikel Toevoegen</a></li>
+				
+				</ul>
+				
+		</header>
+	</div>
+
+<!--spore================================================================================-->
+<div id="spore_wrapper">
+
+	<div id="spore_container">
+
+
+		<a href="#"><div class="spore_item corner">
+			<h3>titel artikel</h3>
+			<img src="images/ocelot___stock_image_by_sekhmet_stock-d3eup3o.png">
+		</div></a>
+
+				<a href="#"><div class="spore_item corner">
+			<h3>titel artikel</h3>
+			<img src="images/ocelot___stock_image_by_sekhmet_stock-d3eup3o.png">
+		</div></a>
+
+				<a href="#"><div class="spore_item corner">
+			<h3>titel artikel</h3>
+			<img src="images/ocelot___stock_image_by_sekhmet_stock-d3eup3o.png">
+		</div></a>
+
+				<a href="#"><div class="spore_item corner">
+			<h3>titel artikel</h3>
+			<img src="images/ocelot___stock_image_by_sekhmet_stock-d3eup3o.png">
+		</div></a>
+
+				<a href="#"><div class="spore_item corner">
+			<h3>titel artikel</h3>
+			<img src="images/ocelot___stock_image_by_sekhmet_stock-d3eup3o.png">
+		</div></a>
+
+
+
 	
-	<!-- page system -->
+	</div>
 
-	<div id= "main" class="container">
-		<div id="header" class="container">
-				<% if user_signed_in? %>
-				  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-				<% else %>
-				  <%= link_to('Login', new_user_session_path)  %>  
-				<% end %>
-		</div>
+		<button id="btn_spore">
+			<div class="btn_spore_vlak"></div>
+			<div class="btn_spore_vlak"></div>
+			<div class="btn_spore_vlak"></div>
+		</button>
 
-		<%= yield %>
-		<div id="footer" class ="container">
-			<p>Geeninspiratie.nl, de site met 10000+ inspiratietips, idee&euml;n, unieke links en meer!</p>
+		<!--Social Media links-->
+	<div id="social_media">
+		<a href="#" alt="facebook" class="facebook"></a>
+		<a href="#" alt="twitter" class="twitter"></a>
+	</div>
+
+<!--Social Media links-->
+</div>	
+
+<!--spore================================================================================-->
+
+
+
+<!--Artikel vinden================================================================================-->
+
+
+<div id="vinden_wrapper">
+	<div id="vinden_container">
+		<div id="vinden_container_2">		
+			<button id="categorieen_btn">Alle categorieen</button>
+			<button id="n_artikelen_btn">Nieuwe artikelen</button>
+			<button id="top_btn">Top artikelen</button>
+			<input type="text" placeholder="zoeken" id="zoek_functie">
 		</div>
 	</div>
-	<%= debug(params) if Rails.env.development? %>
+	<div id="zigzag"></div>
+</div>
+	<!--paigna Kop++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+<div id="kop_wrapper">
+	<div id="kpop_container">
+		<h2>Alle categorien</h2>
+		<!--Messeage++++++++++++++++++++++++-->
+		<div id="message">
+			<% if flash[:error] %>
+				<div id="error"><%= flash[:error] %></div>
+			<% end %>
+
+			<% if flash[:alert] %>
+				<div id="alert"><%= flash[:alert] %></div>
+			<% end %>
+
+			<% if flash[:notice] %>
+			<div id="noticed"><%= flash[:notice] %></div>
+			<% end %>
+		</div>
+	</div>
+
+
+</div>
+
+
+</div>	
+	<div id="wrapper">
+		<%= yield %>
+	</div>
+
+	<div id="footer">
+		<div id="more_btn_container">
+			<button>More</button>
+			<div id="copyright">©Inspiratieplanet en <a href="http://www.gotogrow.nl" title="">Gotogrow</a> <br/> Powered by <a href="http://www.nhl.nl" title="">NHL</a></div>
+		</div>
+
+	</div>
 
 </body>
 </html>
 
+
+</body>
+</html

@@ -1,112 +1,96 @@
-$(function() {
-	var item;
-	$('#dramaTwo').click(function(evt) {
-		$.getJSON('articles.json', function(data) {
-			itemone = data[0];
-			console.log( data[0].content );
-			$('.tile').empty();
-			$('.tile').append('<a href="/articles/' + itemone.id + '">' + '<h2>' + itemone.title + '</h2>' +  '<img src="' + itemone.picture + '" alt="">' + '</a>' )
-			})
-	});
+ // Semicolon (;) to ensure closing of earlier scripting
+    // Encapsulation
+    // $ is assigned to jQuery
+    ;(function($) {
 
-	//Kaboom's random script for Ilse Kroes Homepage
-	// Vars for the 5 datastacks currently used
-	var random_item_1;
-	var random_item_2;
-	var random_item_3;
-	var random_item_4;
-	var random_item_5;
+         // DOM Ready
+        $(function() {
 
-	//the listner & function
-	$('#random_btn').click(function(evt) {
-		//calling the JSON file and processing it
-		$.getJSON('articles.json', function(randomdata) {
-			//putting the randomdata-arrays in our vars
-			random_item_1 = randomdata[0];
-			random_item_2 = randomdata[1];
-			random_item_3 = randomdata[2];
-			random_item_4 = randomdata[3];
-			random_item_5 = randomdata[4];
+            // Binding a click event
+            // From jQuery v.1.7.0 use .on() instead of .bind()
+            $('#Artikel_ID').bind('click', function(e) {
 
-			console.log(random_item_1);
-			console.log(random_item_2);
-			console.log(random_item_3);
-			console.log(random_item_4);
-			console.log(random_item_5);
+                // Prevents the default action to be triggered. 
+                e.preventDefault();
 
-			//Replace the images
-			$('.image1').attr("src", random_item_1.picture.thumb.url);
-			$('.image2').attr("src", random_item_2.picture.thumb.url);
-			$('.image3').attr("src", random_item_3.picture.thumb.url);
-			$('.image4').attr("src", random_item_4.picture.thumb.url);
-			$('.image5').attr("src", random_item_5.picture.thumb.url);
+                // Triggering bPopup when click event is fired
+                if ($(window).width() >= 500) {
+                    $('#Artikel_popUP').bPopup({
+                        speed: 650,
+                        transition: 'slideIn'
+                    });
 
-			//replace texts
-			$('.article1').empty().append('<p>' + random_item_1.content + '</p>');
-			$('.article2').empty().append('<p>' + random_item_2.content + '</p>');
-			$('.article3').empty().append('<p>' + random_item_3.content + '</p>');
-			$('.article4').empty().append('<p>' + random_item_4.content + '</p>');
-			$('.article5').empty().append('<p>' + random_item_5.content + '</p>');
+                }else{
+                    window.location = '/article/'
 
-			//replace titles
-			$('.title1').text(random_item_1.title);
-			$('.title2').text(random_item_2.title);
-			$('.title3').text(random_item_3.title);
-			$('.title4').text(random_item_4.title);
-			$('.title5').text(random_item_5.title);
+                }
 
-			//replace buttons
-			$('.button1').empty().append('<form action="/articles/' + random_item_1.id + '" class="button_to" method="get"><div><input class="open_artikel" type="submit" value="bekijken"></div></form>')
-			$('.button2').empty().append('<form action="/articles/' + random_item_2.id + '" class="button_to" method="get"><div><input class="open_artikel" type="submit" value="bekijken"></div></form>')
-			$('.button3').empty().append('<form action="/articles/' + random_item_3.id + '" class="button_to" method="get"><div><input class="open_artikel" type="submit" value="bekijken"></div></form>')
-			$('.button4').empty().append('<form action="/articles/' + random_item_4.id + '" class="button_to" method="get"><div><input class="open_artikel" type="submit" value="bekijken"></div></form>')
-			$('.button5').empty().append('<form action="/articles/' + random_item_5.id + '" class="button_to" method="get"><div><input class="open_artikel" type="submit" value="bekijken"></div></form>')
-		})
-	})
+            });
+
+        });
+
+    })(jQuery);
 
 
-})
+/*================================================================================
+ * @name: bPopup - if you can't get it up, use bPopup
+ * @author: (c)Bjoern Klinggaard (twitter@bklinggaard)
+ * @demo: http://dinbror.dk/bpopup
+ * @version: 0.9.0.min
+ ================================================================================*/
+ (function(b){b.fn.bPopup=function(u,C){function v(){a.modal&&b('<div class="b-modal '+d+'"></div>').css({backgroundColor:a.modalColor,position:"fixed",top:0,right:0,bottom:0,left:0,opacity:0,zIndex:a.zIndex+l}).each(function(){a.appending&&b(this).appendTo(a.appendTo)}).fadeTo(a.speed,a.opacity);A();c.data("bPopup",a).data("id",d).css({left:"slideIn"===a.transition?-1*(h+g):m(!(!a.follow[0]&&n||f)),position:a.positionStyle||"absolute",top:"slideDown"===a.transition?-1*(j+g):p(!(!a.follow[1]&&q||f)),"z-index":a.zIndex+l+1}).each(function(){a.appending&&b(this).appendTo(a.appendTo)});D(!0)}function r(){a.modal&&b(".b-modal."+c.data("id")).fadeTo(a.speed,0,function(){b(this).remove()});D();return!1}function E(s){var b=s.width(),d=s.height();a.contentContainer.css({height:d,width:b});d<=c.height()&&(d=c.height());b<=c.width()&&(b=c.width());t=c.outerHeight(!0);g=c.outerWidth(!0);a.contentContainer.css({height:"auto",width:"auto"});A();c.dequeue().animate({left:m(!(!a.follow[0]&&n||f)),top:p(!(!a.follow[1]&&q||f)),height:d,width:b},250,function(){s.show();w=B()})}function D(b){switch(a.transition){case "slideIn":c.show().animate({left:b?m(!(!a.follow[0]&&n||f)):-1*(h+g)},a.speed,a.easing,function(){x(b)});break;case "slideDown":c.show().animate({top:b?p(!(!a.follow[1]&&q||f)):-1*(j+t)},a.speed,a.easing,function(){x(b)});break;default:b?c.fadeIn(a.speed,function(){x(b)}):c.stop().fadeOut(a.speed,a.easing,function(){x(b)})}}function x(s){s?(e.data("bPopup",l),c.delegate("."+a.closeClass,"click."+d,r),a.modalClose&&b(".b-modal."+d).css("cursor","pointer").bind("click",r),!F&&(a.follow[0]||a.follow[1])&&e.bind("scroll."+d,function(){w&&c.dequeue().animate({left:a.follow[0]?m(!f):"auto",top:a.follow[1]?p(!f):"auto"},a.followSpeed,a.followEasing)}).bind("resize."+d,function(){if(w=B())A(),c.dequeue().each(function(){f?b(this).css({left:h,top:j}):b(this).animate({left:a.follow[0]?m(!0):"auto",top:a.follow[1]?p(!0):"auto"},a.followSpeed,a.followEasing)})}),a.escClose&&y.bind("keydown."+d,function(a){27==a.which&&r()}),k(C)):(a.scrollBar||b("html").css("overflow","auto"),b(".bModal."+d).unbind("click"),y.unbind("keydown."+d),e.unbind("."+d).data("bPopup",0<e.data("bPopup")-1?e.data("bPopup")-1:null),c.undelegate("."+a.closeClass,"click."+d,r).data("bPopup",null).hide(),k(a.onClose),a.loadUrl&&(a.contentContainer.empty(),c.css({height:"auto",width:"auto"})))}function m(a){return a?h+y.scrollLeft():h}function p(a){return a?j+y.scrollTop():j}function k(a){b.isFunction(a)&&a.call(c)}function A(){var b;q?b=a.position[1]:(b=((window.innerHeight||e.height())-t)/2-a.amsl,b=b<z?z:b);j=b;h=n?a.position[0]:((window.innerWidth||e.width())-g)/2;w=B()}function B(){return(window.innerHeight||e.height())>c.outerHeight(!0)+z&&(window.innerWidth||e.width())>c.outerWidth(!0)+z}b.isFunction(u)&&(C=u,u=null);var a=b.extend({},b.fn.bPopup.defaults,u);a.scrollBar||b("html").css("overflow","hidden");var c=this,y=b(document),e=b(window),F=/OS 6(_\d)+/i.test(navigator.userAgent),z=20,l=0,d,w,q,n,f,j,h,t,g;c.close=function(){a=this.data("bPopup");d="__b-popup"+e.data("bPopup")+"__";r()};return c.each(function(){if(!b(this).data("bPopup"))if(k(a.onOpen),l=(e.data("bPopup")||0)+1,d="__b-popup"+l+"__",q="auto"!==a.position[1],n="auto"!==a.position[0],f="fixed"===a.positionStyle,t=c.outerHeight(!0),g=c.outerWidth(!0),a.loadUrl)switch(a.contentContainer=b(a.contentContainer||c),a.content){case "iframe":b('<iframe class="b-iframe" scrolling="no" frameborder="0"></iframe>').attr("src",a.loadUrl).appendTo(a.contentContainer);k(a.loadCallback);t=c.outerHeight(!0);g=c.outerWidth(!0);v();break;case "image":v();b("<img />").load(function(){k(a.loadCallback);E(b(this))}).attr("src",a.loadUrl).hide().appendTo(a.contentContainer);break;default:v(),b('<div class="b-ajax-wrapper"></div>').load(a.loadUrl,a.loadData,function(){k(a.loadCallback);E(b(this))}).hide().appendTo(a.contentContainer)}else v()})};b.fn.bPopup.defaults={amsl:50,appending:!0,appendTo:"body",closeClass:"b-close",content:"ajax",contentContainer:!1,easing:"swing",escClose:!0,follow:[!0,!0],followEasing:"swing",followSpeed:500,loadCallback:!1,loadData:!1,loadUrl:!1,modal:!0,modalClose:!0,modalColor:"#000",onClose:!1,onOpen:!1,opacity:0.7,position:["auto","auto"],positionStyle:"absolute",scrollBar:!0,speed:250,transition:"fadeIn",zIndex:9997}})(jQuery);
 
+ 
+    // Stuff to do as soon as the DOM is ready;
 
+            /*Artikel card layout==========================================*/
 
-// Homepage scripts by Ilse Kroes
+            var colCount = 0;
+            var colWidth = 0;
+            var margin = 10;
+            var wrapperWidth = 0;
+            var Collums = [];
+            var lastArticle = null;
+            var wrapperHeight = 0;
 
-		$(document).ready(function(){
-/*spore slider*/
+            /*Opnieuw indelen als windows verandert*/
+            $(function(){
+                $(".wrapper").resize(setupCollums);
+            });
 
-	 		$('#btn_spore').click(function(){
-				$('#spore_container').stop().animate({width: 'toggle'}, 130);
-			});
+            function setupCollums(){
+                wrapperWidth = $('#wrapper').width();
+                colWidth = $('.artikel_wrapper').outerWidth();
+                colCount = Math.floor(wrapperWidth/(colWidth + margin));
 
+                for (var i = 0; i <colCount; i++) {
+                    Collums.push(margin);
+                }
+                positionArticel();
+            }
 
+            function positionArticel() {
+                $('.artikel_wrapper').each(function(){
+                    var min = Array.min(Collums);
+                    var index = $.inArray(min, Collums);
+                    var leftPos = margin+(index*(colWidth+margin));
+                    $(this).css({
+                        'left':leftPos+'px',
+                        'top':min+'px'
+                    });
+                    Collums[index] = min+$(this).outerHeight()+margin;
 
-/*FLIP artieken*/
-			
+                    lastArticle = $(this);
+                    wrapperHeight = parseFloat(lastArticle.css("top")) + lastArticle.height();
 
+                    $("#wrapper").height(" " + wrapperHeight + "px")
 
-	 		var $turn1 = function(){
-				$(this).parent().animate({height: 240+"px", width: 0+'px', marginLeft: 120+'px'}, 100, function(){
-				$(this).find('img').hide();
-				}).animate({height: 240+'px', width: 240+'px', marginLeft:0+'px'}, 100);
-			};
+                }); 
+            }
 
-			var $turn2 = function(){
-				$(this).parent().animate({height: 240+"px", width: 0+'px', marginLeft: 120+'px'}, 100, function(){
-				$(this).find('img').show();
-				}).animate({height: 240+'px', width: 240+'px', marginLeft:0+'px'}, 100);
-			};
+            /*Functie voor het vinden van de Min value in een array*/
+                Array.min = function(array) {
+                    return Math.min.apply(Math, array);
+                };
 
-
-			$(".artikel img").click(
-				$turn1
-			);
-
-			$(".artikel_tekst").mouseleave(
-				$turn2
-			);
-
-	  	});
-
-
-
-
+            /*Functie voor het vinden van de Mx value in een array*/

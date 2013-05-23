@@ -1,0 +1,285 @@
+/*PopUp ===========================================================*/
+.show{
+	display: block;
+	margin: 0 auto; 
+	margin-top: 29px; 
+	background-color: #ffffff; 
+	position: absolute;
+	left: 50%;
+	margin-left: -500px;
+}
+
+.hide{
+	display: none;
+}
+
+#Artikel_popUP{
+	width: 1000px; 
+	background-color: #ffffff; 
+	border:solid 1px red;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+}
+
+#Artikel_popUP::-webkit-input-placeholder {
+   color: black;
+}
+
+#Artikel_popUP:-moz-placeholder { /* Firefox 18- */
+   color: black;  
+}
+
+#Artikel_popUP::-moz-placeholder {  /* Firefox 19+ */
+   color: black;  
+}
+
+#Artikel_popUP:-ms-input-placeholder {  
+   color: black;  
+}
+
+#gallery{
+	float: left;
+	width: 490px; 
+}
+
+#art_info{
+	width: 490px; 
+	float: right;
+	padding: 0px 10px 10px 10px;
+}
+
+#art_delen a{
+	width: 30px; 
+	height: 30px; 
+	display:inline-block;
+	text-decoration: none;
+	border: none; 
+	margin-right: 10px; 
+	background-color: green; 
+}
+
+#art_actie a{
+width: 156px;
+height: 25px;
+display: block;
+padding-top: 5px;
+float: left;
+margin-top: 10px;
+border-bottom: solid #0994a5 5px;
+}
+
+#art_actie a:hover, #art_actie a:active{
+	color:#0a6f7b;
+	border-bottom: solid #0a6f7b 5px;
+}
+
+.b-close{
+	color:#ffffff;
+	font-size: 20px;
+	padding: 1px 10px 5px 10px;
+}
+
+#kop{
+	width: 100%;
+	height: 30px; 
+	background-color: red; 
+	-webkit-border-top-left-radius: 8px;
+	-webkit-border-top-right-radius: 8px;
+	-moz-border-radius-topleft: 8px;
+	-moz-border-radius-topright: 8px;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+}
+
+#kop h3{
+	float: left;
+	display: inline-block;
+
+
+}
+
+#kop a{
+	display: inline-block;
+	float: right;
+}
+
+#fav_icon{
+padding-right: 18px;
+padding-top: 5px;
+margin-right: 10px; 
+color: #ffffff;
+text-decoration: none;
+height: 30px;
+display: inline-block;
+background-image: url(images/fav_icon.png);
+background-repeat: no-repeat;
+background-position: right;
+}
+
+
+#tags{
+	padding-left: 18px; 
+	background-image: url(images/tag_icon.png);
+	background-position: left top;
+	background-repeat: no-repeat;
+}
+
+#categorie{
+	padding-left: 18px;
+	background-position: left top;
+	background-repeat: no-repeat;
+	background-image: url(images/categorie_icon.png);
+}
+
+#art_info a,#art_info a:hover, #art_info a:active{
+	color: black;
+}
+
+#art_delen{
+	margin-top: 10px; 
+	width: 100%;
+
+}
+
+#art_actie{
+}
+
+a#link_btn{
+	color:#0994a5;
+	margin-right: 10px;
+	background-image: url(images/link_icon.png);
+	background-repeat: no-repeat;
+	background-position: right;
+	text-decoration: none;
+}
+
+a#link_btn:hover, a#link_btn:active, a#fav_btn:hover, a#fav_btn:active, a#comments_btn:hover, a#comments_btn:active, .post_btn:hover, .post_btn:active, a#fav_btn_uit:hover, a#fav_btn_uit:active{
+		color:#0a6f7b;
+	border-bottom: solid #0a6f7b 5px;
+}
+
+a#fav_btn{
+	color:#0994a5;
+	background-image: url(images/fav_icon_btn.png);
+	background-repeat: no-repeat;
+	margin-right: 10px;
+	background-position: right;
+	text-decoration: none;
+}
+
+a#fav_btn_uit{
+color: #0994a5;
+margin-right: 10px;
+background-image: url(images/fav_icon_btn_uit.png);
+background-repeat: no-repeat;
+background-position: right;
+text-decoration: none;
+}
+
+a#fav_btn_uit:hover{
+	background-image: url(images/fav_icon_btn.png);
+}
+
+a#comments_btn{
+	color:#0994a5;
+	background-image: url(images/reactie_icon.png);
+	background-repeat: no-repeat;
+	background-position: right;
+	text-decoration: none;
+}
+
+#reaties_container{
+	width: 100%;
+	margin-top:50px; 
+	background-color: #ffffff; 
+	display: none;
+}
+
+#reaties_container ul li{
+	list-style-type: none;
+	border-bottom: solid 1px #c2c2c2;
+	padding-bottom: 10px; 
+}
+
+.gebruiker_naam{
+	color:#0994a5;
+}
+
+.comments_input_titel{
+	width: 100%;
+	height: 30px;
+	border: none;
+	color:#0994a5;
+	font-size: 14px;
+	border-bottom: solid 1px rgb(83, 83, 83);;
+	margin-bottom: 10px; 
+}
+
+.comments_input{
+	width: 100%;
+	border: none;
+	color:#0994a5;
+	font-size: 14px;
+	border-bottom: solid 1px rgb(83, 83, 83);
+}
+
+.post_btn{
+display: block;
+height: 30px;
+margin-top: 8px;
+margin-left: 457px;
+background-color: #ffffff;
+border: none;
+border-bottom: solid #0994a5 5px;
+color: #0994a5;
+font-size: 16px;
+font-size: 16px;
+cursor: pointer;
+}
+
+.post_btn:hover{
+
+}
+
+
+/*Artikel==========================================================*/
+.artikel_container h3{
+color: #ffffff;
+width: 174px;
+display: inline-block;
+width: 180px;
+}
+
+.artikel_container{
+border: solid 1px red;
+}
+
+#wrapper{
+	width: 1000px;
+	padding-left: 10px; 
+	margin: 0 auto; 
+	position: relative; 
+}
+
+#Artikel_toevoegen_2{
+	display: none; 
+}
+
+.gebuiker_2, .in-uitloggen_2{
+	display: none; 
+}
+
+.nav-menu-btn_2{
+	display: none;
+}
+
+#more_btn_container{
+	width: 1000px; 
+	margin: 0 auto;
+}
+
+
+#more_btn_container button{
+	width: 490px; 
+}

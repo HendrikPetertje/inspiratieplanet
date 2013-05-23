@@ -1,133 +1,191 @@
-<!--SPORE======================================================================================================-->
-<div id="spore_wrapper">
-	<div id="spore_container">
-		<a href="#"><div class="spore_item corner"></div></a>
-		<a href="#"><div class="spore_item corner"></div></a>
-		<a href="#"><div class="spore_item corner"></div></a>
-		<a href="#"><div class="spore_item corner"></div></a>
-		<a href="#"><div class="spore_item corner"></div></a>
-		<a href="#"><div class="spore_item corner"></div></a>
-		<a href="#"><div class="spore_item corner"></div></a>
-		<a href="#"><div class="spore_item corner"></div></a>
-		<a href="#"><div class="spore_item corner"></div></a>
+<!--PopUP=======================================================================-->
+
+<div id="Artikel_popUP" class="hide">
+	<div id="kop">
+		<h3>titel balabl</h2>
+			<a class="b-close">x</a>
+		<a href="#" id="fav_icon">11</a>
+		
 	</div>
+    
+    	<div id="gallery">
+    		<img src="images/victorian_dress_full_train_by_magikstock.png">
+    	</div>
 
-	<div id="btn_container"> 
-		<button id="btn_spore"></button>
-	</div>
+		<div id="art_info">
 
-</div>
-
-<!--Articles======================================================================================================-->
-
-	<header>
-			<!-- ====================================-->
-			<div id="inlog_wrapper">
-				
-				
-				
-			</div>
-	</header>
-
-<div id="wrapper">
-
-<div class="artikel_wrapper">
-	<div class="artikel corner">
-		<!-- <font class="artikel_1_img"> -->
-	
-
-			<img src="<%= @articles.last.picture_url(:thumb) %>" alt="Images" class="image1 corner flip">
-		<!-- </font> -->
-
-			<div class="artikel_tekst_1 artikel_tekst">
-				<h3 class="title1"><%= @articles.last.title %></h3>
-				<div class="article1"><p><%= @articles.last.content %></p></div>
-				<div class="button1">
-				<%= button_to 'bekijken', @articles.last, :method => :get, :class => 'open_artikel' %>
+				<div id="text">
+					<p>Candy gingerbread jelly-o ice cream. Muffin icing cookie cotton candy marshmallow cotton candy. Gingerbread cheesecake bonbon tootsie roll soufflé. Applicake wafer bonbon pudding pie cheesecake. Ice cream chocolate bonbon wafer gummi bears cupcake icing. Marzipan gummies chocolate cake lollipop sugar plum gingerbread donut. Jelly-o chocolate muffin. Sweet bonbon jujubes powder liquorice liquorice bear claw. Bear claw faworki gummi bears croissant macaroon jelly. Pie fruitcake jujubes apple pie carrot cake jelly-o. Gingerbread tart cotton candy caramels tootsie roll gummies chupa chups. Cake </p>
+					<p>
+					Geupload door: <a href="#">Ilse Kroes</a><br>
+					Datum: 20/11/2013</p>
 				</div>
-			</div>
-	</div>
+
+				<div id="art_indeling">
+					<p id="categorie"><a href="#">Trouwen</a></p>
+					<p id="tags"> <a href="#">tage</a>, <a href="#">tage</a>, </p>
+				</div>
+
+				<div id="art_delen">
+					<a href="#" id="facebook_btn"></a>
+					<a href="#" id="pintrest_btn"></a>
+					<a href="#" id="twitter_btn"></a>
+					<a href="#" id="delen_btn"></a>
+				</div>
+
+				<div id="art_actie">
+					<a href="#" id="link_btn">Link</a>
+					<a href="#" id="fav_btn_uit">Fav +</a>
+					<a href="#" id="comments_btn">Reacties</a>
+				</div>
+
+				<div id="reaties_container">
+					<ul>
+						<li>
+							<input class="comments_input_titel" type="text" placeholder="naam">
+							<textarea class="comments_input" placeholder="reactie"></textarea>
+							<button class="post_btn" type="submit" role="button">Post</button>
+
+						</li>
+						<li>
+							<p class="gebruiker_naam">Naam gebruiker</p>
+							<p class="comment">djshfkl;ajsd aksjdf ;sdj asjkf asf ;klsdf ;asdjk f</p>
+						</li>
+
+						<li>
+							<p class="gebruiker_naam">Naam gebruiker</p>
+							<p class="comment">djshfkl;ajsd aksjdf ;sdj asjkf asf ;klsdf ;asdjk f</p>
+						</li>
+
+					</ul>	
+
+				</div>
+		</div>
+
+
 </div>
 
-<!--RANDOM BUTTON======================================================================================================-->
-<div class="artikel_wrapper random">
-		<div id="random_1" class="artikel corner">
-			<div id="random_button_wrapper">
-				<h3>Geen Inspiratie ?</h3>
-				<p><button id="random_btn">Verras Mij!</button></p>
-				<input id="zoeken"type="text" placeholder="zoeken"/>
-				<select>
-					<option>Alles</option>
-					<option>categorie 1</option>
-					<option>categorie 2</option>
-					<option>categorie 3</option>
-					<option>categorie 4</option>
-					<option>categorie 5</option>
-				</select>
+<!--PopUp=======================================================================-->
+
+<!--Artikelen==============================================================================-->
+
+	<div class="artikel_wrapper">
+		<div class="artikel_container">
+			<div class="kop_k">
+				<h3>Titel artikel </h3> <a href="#" class="fav_icon_k">11</a>
+			</div>
+			<img class="artikel_tegel" src="images/ocelot___stock_image_by_sekhmet_stock-d3eup3o.png" alt="images">
+			
+
+			<div class="text_wrapper">
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa. </p>
+			</div>
+			<button id="Artikel_ID">Bekijken<div></div></button>
+		</div>
+	</div>
+
+		<div class="artikel_wrapper">
+		<div class="artikel_container">
+						<div class="kop_k">
+				<h3>Titel artikel </h3> <a href="#" class="fav_icon_k">11</a>
+			</div>
+			<img class="artikel_tegel" src="images/Stock_280__peacock_feathers_by_AlzirrSwanheartStock.png" alt="images">
+			<div class="text_wrapper">
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa. </p>
+			</div>
+			<button>Bekijken<div></div></button>
+		</div>
+	</div>
+
+	<div class="artikel_wrapper">
+		<div class="artikel_container">
+						<div class="kop_k">
+				<h3>Titel artikel </h3> <a href="#" class="fav_icon_k">11</a>
+			</div>
+
+			<img class="artikel_tegel" src="images/ocelot___stock_image_by_sekhmet_stock-d3eup3o.png" alt="images">
+			<div class="text_wrapper">
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa. </p>
+			</div>
+			<button>Bekijken</button>
+		</div>
+	</div>
+
+		<div class="artikel_wrapper">
+		<div class="artikel_container">
+
+						<div class="kop_k">
+				<h3>Titel artikel </h3> <a href="#" class="fav_icon_k">11</a>
+			</div>
+
+			<img class="artikel_tegel" src="images/victorian_dress_full_train_by_magikstock.png" alt="images">
+			<div class="text_wrapper">
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa. </p>
+			</div>
+			<button>Bekijken</button>
+		</div>
+	</div>
+
+		<div class="artikel_wrapper">
+		<div class="artikel_container">
+
+						<div class="kop_k">
+				<h3>Titel artikel </h3> <a href="#" class="fav_icon_k">11</a>
+			</div>
+
+			<img class="artikel_tegel" src="images/ocelot___stock_image_by_sekhmet_stock-d3eup3o.png" alt="images">
+			<div class="text_wrapper">
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa. </p>
+			</div>
+			<button>Bekijken</button>
+		</div>
+	</div>
+
+	<div class="artikel_wrapper">
+		<div class="artikel_container">
+
+						<div class="kop_k">
+				<h3>Titel artikel </h3> <a href="#" class="fav_icon_k">11</a>
+			</div>
+			<img class="artikel_tegel" src="images/Stock_280__peacock_feathers_by_AlzirrSwanheartStock.png" alt="images">
+			<div class="text_wrapper">
+				
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa. </p>
+			</div>
+			<button>Bekijken</button>
+		</div>
+	</div>
+
+	<div class="artikel_wrapper">
+		<div class="artikel_container">
+
+						<div class="kop_k">
+				<h3>Titel artikel </h3> <a href="#" class="fav_icon_k">11</a>
+			</div>
+			<img class="artikel_tegel" src="images/ocelot___stock_image_by_sekhmet_stock-d3eup3o.png" alt="images">
+			<div class="text_wrapper">
+				
+
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa. </p>
+			</div>
+			<button>Bekijken</button>
+		</div>
+	</div>
+
+	<div class="artikel_wrapper">
+		<div class="artikel_container">
+						<div class="kop_k">
+				<h3>Titel artikel </h3> <a href="#" class="fav_icon_k">11</a>
+			</div>
+			<img class="artikel_tegel" src="images/victorian_dress_full_train_by_magikstock.png" alt="images">
+			<div class="text_wrapper">
+				
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa. </p>
+			</div>
+			<button>Bekijken</button>
 		</div>
 	</div>
 
 </div>
 
-<div class="artikel_wrapper">
-	<div class="artikel corner">
-			<img src="<%= @articles[-2].picture_url(:thumb)  %>" alt="Images" class="image2 corner">
-			
-			<div class="artikel_tekst_2 artikel_tekst">
-				<h3 class="title2"><%= @articles[-2].title %></h3>
-				<div class="article2"><p><%= @articles[-2].content %></p></div>
-				<div class="button2">
-				<%= button_to 'bekijken', @articles[-2], :method => :get, :class => 'open_artikel button2' %>
-				</div>
-			</div>
-	</div>
-</div>
-
-
-
-
-<div class="artikel_wrapper">
-	<div class="artikel corner">
-			<img src="<%= @articles[-3].picture_url(:thumb) %>" alt="Images" class="image3 corner">
-
-			<div class="artikel_tekst_3 artikel_tekst">
-				<h3 class="title3"><%= @articles[-3].title %></h3>
-				<div class="article3"><p><%= @articles[-3].content %></p></div>
-				<div class="button3">
-				<%= button_to 'bekijken', @articles[-3], :method => :get, :class => 'open_artikel button3' %>
-				</div>
-			</div>
-			
-	</div>
-</div>
-
-<div class="artikel_wrapper">
-	<div class="artikel corner">
-			<img src="<%= @articles[-4].picture_url(:thumb) %>" alt="Images" class="image4 corner">
-			<%= image_tag @articles[-4].picture_url(:thumb)%>
-
-			<div class="artikel_tekst_4 artikel_tekst">
-				<h3 class="title4"><%= @articles[-4].title %></h3>
-				<div class="article4"><p><%= @articles[-4].content %></p></div>
-				<div class="button4">
-				<%= button_to 'bekijken', @articles[-4], :method => :get, :class => 'open_artikel button4' %>
-				</div>
-			</div>
-			
-	</div>
-</div>
-
-<div class="artikel_wrapper">
-	<div class="artikel corner">
-			<img src="<%= @articles[-5].picture_url(:thumb)  %>" alt="Images" class="image5 corner">
-
-			<div class="artikel_tekst_5 artikel_tekst">
-				<h3 class="title5"><%= @articles[-5].title %></h3>
-				<div class="article5"><p><%= @articles[-5].content %></p></div>
-				<div class="button5">
-				<%= button_to 'bekijken', @articles[-5], :method => :get, :class => 'open_artikel button5' %>
-				</div>
-			</div>
-			
-	</div>
-</div>
+<!--ENDE Artikelen======================================================================-->

@@ -1,0 +1,133 @@
+<!--SPORE======================================================================================================-->
+<div id="spore_wrapper">
+	<div id="spore_container">
+		<a href="#"><div class="spore_item corner"></div></a>
+		<a href="#"><div class="spore_item corner"></div></a>
+		<a href="#"><div class="spore_item corner"></div></a>
+		<a href="#"><div class="spore_item corner"></div></a>
+		<a href="#"><div class="spore_item corner"></div></a>
+		<a href="#"><div class="spore_item corner"></div></a>
+		<a href="#"><div class="spore_item corner"></div></a>
+		<a href="#"><div class="spore_item corner"></div></a>
+		<a href="#"><div class="spore_item corner"></div></a>
+	</div>
+
+	<div id="btn_container"> 
+		<button id="btn_spore"></button>
+	</div>
+
+</div>
+
+<!--Articles======================================================================================================-->
+
+	<header>
+			<!-- ====================================-->
+			<div id="inlog_wrapper">
+				
+				
+				
+			</div>
+	</header>
+
+<div id="wrapper">
+
+<div class="artikel_wrapper">
+	<div class="artikel corner">
+		<!-- <font class="artikel_1_img"> -->
+	
+
+			<img src="<%= @articles.last.picture_url(:thumb) %>" alt="Images" class="image1 corner flip">
+		<!-- </font> -->
+
+			<div class="artikel_tekst_1 artikel_tekst">
+				<h3 class="title1"><%= @articles.last.title %></h3>
+				<div class="article1"><p><%= @articles.last.content %></p></div>
+				<div class="button1">
+				<%= button_to 'bekijken', @articles.last, :method => :get, :class => 'open_artikel' %>
+				</div>
+			</div>
+	</div>
+</div>
+
+<!--RANDOM BUTTON======================================================================================================-->
+<div class="artikel_wrapper random">
+		<div id="random_1" class="artikel corner">
+			<div id="random_button_wrapper">
+				<h3>Geen Inspiratie ?</h3>
+				<p><button id="random_btn">Verras Mij!</button></p>
+				<input id="zoeken"type="text" placeholder="zoeken"/>
+				<select>
+					<option>Alles</option>
+					<option>categorie 1</option>
+					<option>categorie 2</option>
+					<option>categorie 3</option>
+					<option>categorie 4</option>
+					<option>categorie 5</option>
+				</select>
+		</div>
+	</div>
+
+</div>
+
+<div class="artikel_wrapper">
+	<div class="artikel corner">
+			<img src="<%= @articles[-2].picture_url(:thumb)  %>" alt="Images" class="image2 corner">
+			
+			<div class="artikel_tekst_2 artikel_tekst">
+				<h3 class="title2"><%= @articles[-2].title %></h3>
+				<div class="article2"><p><%= @articles[-2].content %></p></div>
+				<div class="button2">
+				<%= button_to 'bekijken', @articles[-2], :method => :get, :class => 'open_artikel button2' %>
+				</div>
+			</div>
+	</div>
+</div>
+
+
+
+
+<div class="artikel_wrapper">
+	<div class="artikel corner">
+			<img src="<%= @articles[-3].picture_url(:thumb) %>" alt="Images" class="image3 corner">
+
+			<div class="artikel_tekst_3 artikel_tekst">
+				<h3 class="title3"><%= @articles[-3].title %></h3>
+				<div class="article3"><p><%= @articles[-3].content %></p></div>
+				<div class="button3">
+				<%= button_to 'bekijken', @articles[-3], :method => :get, :class => 'open_artikel button3' %>
+				</div>
+			</div>
+			
+	</div>
+</div>
+
+<div class="artikel_wrapper">
+	<div class="artikel corner">
+			<img src="<%= @articles[-4].picture_url(:thumb) %>" alt="Images" class="image4 corner">
+			<%= image_tag @articles[-4].picture_url(:thumb)%>
+
+			<div class="artikel_tekst_4 artikel_tekst">
+				<h3 class="title4"><%= @articles[-4].title %></h3>
+				<div class="article4"><p><%= @articles[-4].content %></p></div>
+				<div class="button4">
+				<%= button_to 'bekijken', @articles[-4], :method => :get, :class => 'open_artikel button4' %>
+				</div>
+			</div>
+			
+	</div>
+</div>
+
+<div class="artikel_wrapper">
+	<div class="artikel corner">
+			<img src="<%= @articles[-5].picture_url(:thumb)  %>" alt="Images" class="image5 corner">
+
+			<div class="artikel_tekst_5 artikel_tekst">
+				<h3 class="title5"><%= @articles[-5].title %></h3>
+				<div class="article5"><p><%= @articles[-5].content %></p></div>
+				<div class="button5">
+				<%= button_to 'bekijken', @articles[-5], :method => :get, :class => 'open_artikel button5' %>
+				</div>
+			</div>
+			
+	</div>
+</div>
