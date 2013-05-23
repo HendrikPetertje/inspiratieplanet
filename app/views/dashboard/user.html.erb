@@ -29,7 +29,7 @@
 <div id="articles" class="container">
 	<% @articleslimit.each do |article| %>
 		<div class="article_block">
-			<img class="article_tile" src="" alt="images">
+			<img class="article_tile" src="<%= article.picture_url(:thumb) %>" alt="images">
 
 				<div class="text_wrapper">
 					<h3><%= article.title %></h3>

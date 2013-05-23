@@ -9,7 +9,7 @@ $(document).ready(function(){
 					console.log( article[i] );
 					$('.user-articles-morecontent').append(
 						'<div class="article_block">' +
-							'<img class="article_tile" src="' + article[i].picture + '" alt="images">' +
+							'<img class="article_tile" src="' + article[i].picture.thumb.url + '" alt="images">' +
 								'<div class="text_wrapper">' +
 									'<h3>' + article[i].title + '</h3>' +
 									'<div class="article_text">' +
