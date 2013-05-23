@@ -1,0 +1,66 @@
+<html>
+<head>
+    <script src="jquery-1.9.1.js"></script>    
+    <script src="responsiveslides.min.js"></script>
+
+      <script>
+    // You can also use "$(window).load(function() {"
+    $(function () {
+
+      // Slideshow 1
+      $("#slider2").responsiveSlides({
+        auto: false,
+        pager: false,
+        nav: true,
+        speed: 500,
+        prevText: "<",
+        nextText: ">"
+
+      });
+
+    });
+  </script>
+
+  <style type="text/css">
+
+  #slider2{
+  	width: 490px;
+  	background-color: red; 
+  }
+
+  #slider2 img{
+  	max-width: 490px; 
+  	max-height: 400px; 
+  	text-align: center;
+  }
+
+  #slider2 li{
+  	display: block;
+  	width: 490px; 
+  }
+
+div{
+	width: 500px; 
+	height: 400px; 
+	background-color: blue; 
+}
+}
+
+  </style>
+
+</head>
+
+<body>
+
+<div id="gallery">
+
+    <ul class="rslides" id="slider2">
+      <li><img src="victorian_dress_full_train_by_magikstock.png" alt=""></li>
+      <li><img src="Stock_280__peacock_feathers_by_AlzirrSwanheartStock.png" alt=""></li>
+      <li><img src="ocelot___stock_image_by_sekhmet_stock-d3eup3o.png" alt=""></li>
+    </ul>
+
+</div>
+
+</body>
+</html>

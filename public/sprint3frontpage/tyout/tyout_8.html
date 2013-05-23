@@ -1,0 +1,34 @@
+<html>
+<head>
+
+    <script src="jquery-1.9.1.js"></script>    <script src="jquery.bpopup-x.x.x.min.js"></script>
+    <style type="text/css">
+#element_to_pop_up { 
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none; 
+    padding:20px;
+    width: 1000px;  
+    min-height: 180px;
+}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+    </style>
+</head>
+
+<body>
+<!-- Button that triggers the popup -->
+<button id="my-button">POP IT UP</button>
+<!-- Element to pop up -->
+<div id="element_to_pop_up">
+    <a class="b-close">x<a/>
+    Content of popup
+</div>
+
+</body>
+</html>
