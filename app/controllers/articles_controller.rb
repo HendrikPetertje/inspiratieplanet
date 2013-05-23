@@ -85,23 +85,59 @@ class ArticlesController < ApplicationController
   # DELETE /articles/1
   # DELETE /articles/1.json
   def destroy
-    # verwijder gebruiker
-    # @article = Article.find(params[:id])
-    # @article.destroy
-    
-    # Remove favorites linked to the article
-    if @artcile.favorites.inculde?(@artcile.favorites.article_id)
-      u_fav = @article.favorites
-      u_fav.each do |favorite|
-        favorite.destroy
+    @article = Article.find(params[:id])
+
+    if current_user.id == @article.user_id
+      # Remove favorites linked to the article
+        if @article.favorites.count > 0
+        @article.favorites.each do |favorite|
+          favorite.destroy
+        end
       end
-    end
 
-    # remove reviews linked to the article
+      # remove reviews linked to the article
+      if @article.reviews.count > 0
+        @article.reviews.each do |review|
+          review.destroy
+        end
+      end
 
+      # Remove article
+      @article.destroy
+    
     respond_to do |format|
-      format.html { redirect_to articles_url }
-      format.json { head :no_content }
+        format.html { redirect_to articles_url }
+        format.json { head :no_content }
+      end
+
+    elsif current_user.admin?
+      # Remove favorites linked to the article
+        if @article.favorites.count > 0
+        @article.favorites.each do |favorite|
+          favorite.destroy
+        end
+      end
+
+      # remove reviews linked to the article
+      if @article.reviews.count > 0
+        @article.reviews.each do |review|
+          review.destroy
+        end
+      end
+
+      # Remove article
+      @article.destroy
+
+      respond_to do |format|
+        format.html { redirect_to articles_url }
+        format.json { head :no_content }
+      end
+    
+    else
+      respond_to do |format|
+        format.html { redirect_to @article, notice: 'U hebt geen toegang dit artikel te verwijderen' }
+        format.json { head :no_content }
+      end
     end
   end
 
