@@ -27,7 +27,7 @@
 <!--Articles============================================================!-->
 
 <div id="articles" class="container">
-	<% @articles.each do |article| %>
+	<% @articleslimit.each do |article| %>
 		<div class="article_block">
 			<img class="article_tile" src="" alt="images">
 
@@ -40,8 +40,15 @@
 					<%= link_to 'Show', article %>
 					<%= link_to 'Edit', edit_article_path(article) %>
 					<%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %>
+					<a href="#" id="link">Show/Hide</a>
+					<div id="mydiv">Some content</div>
 				</div>
 		</div>
+
+
 	<% end %>
+
+	<div class='user-articles-morebutton'>show more?</div>
+	<div class="user-articles-morecontent"></div>
 
 </div>

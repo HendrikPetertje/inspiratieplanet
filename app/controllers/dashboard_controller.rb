@@ -2,7 +2,13 @@ class DashboardController < ApplicationController
 before_filter :authenticate_user!
 
   def user
-  	@articles = current_user.articles.order("articles.created_at desc").limit(10)
+  	@articleslimit = current_user.articles.order("articles.created_at desc").limit(4)
+  	@articlesall = current_user.articles.order("articles.created_at desc")
+  	
+  	respond_to do |format|
+  		format.html
+	  	format.json { render json: @articlesall }
+  	end
   end
 
 end
