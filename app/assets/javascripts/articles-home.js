@@ -7,11 +7,23 @@
         $(function() {
 
             // Binding a click event
-            // From jQuery v.1.7.0 use .on() instead of .bind()
-            $('#Artikel_ID').bind('click', function(e) {
 
+            $('.article-index-button').click(function (e) {
                 // Prevents the default action to be triggered. 
+                indexarticleid = e.target.id;
+                console.log(indexarticleid);
                 e.preventDefault();
+
+                // Fills popup element with content
+                $.getJSON('articles.json', function(indexarticle){
+                    $('.popup-title').empty().append(indexarticle[indexarticleid].title);
+                    $('#popup-image').attr('src', indexarticle[indexarticleid].picture.pageimage.url);
+                    $('.popup-content').empty().append(indexarticle[indexarticleid].content);
+                    $('.popup-name').empty().append('Geupload door: ' + indexarticle[indexarticleid].user_id);
+                    $('.popup-date').empty().append('Datum: ' + indexarticle[indexarticleid].created_at);
+                    $('.popup-tags').empty().append('Datum: ' + indexarticle[indexarticleid].tags);
+
+                });
 
                 // Triggering bPopup when click event is fired
                 if ($(window).width() >= 500) {

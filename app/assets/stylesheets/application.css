@@ -17,6 +17,9 @@
 	padding: 0px;
 }
 
+img {
+	border:0;
+}
 /*Font ==========================================================*/
 
 body{
@@ -79,9 +82,9 @@ header a{
 	top: 0;
 	z-index: 1000; 
 	background-color: #ffffff;
--webkit-box-shadow: 0px 5px 5px rgba(50, 50, 50, 0.29);
--moz-box-shadow:    0px 5px 5px rgba(50, 50, 50, 0.29);
-box-shadow: 0px 5px 5px rgba(50, 50, 50, 0.29);
+	-webkit-box-shadow: 0px 5px 5px rgba(50, 50, 50, 0.29);
+	-moz-box-shadow:    0px 5px 5px rgba(50, 50, 50, 0.29);
+	box-shadow: 0px 5px 5px rgba(50, 50, 50, 0.29);
 }
  
 header{
@@ -150,7 +153,7 @@ header li{
 }
 
 .nav-menu-btn{
-	background-image: url(images/dropdown_icon.png);
+	background-image: url(/images/dropdown_icon.png);
 	background-repeat: no-repeat;
 	background-position: right;
 	width: 240px; 
@@ -170,7 +173,7 @@ header li{
 
 .message{
 	margin: 17px 10px 0px 0px; 
-	background-image: url(images/bericht.png);
+	background-image: url(/images/bericht.png);
 	background-repeat: no-repeat;
 	width: 36; 
 	border: none;
@@ -179,7 +182,7 @@ header li{
 }
 
 .message:hover, .message:active{
-	background-image: url(images/bericht_hover.png);
+	background-image: url(/images/bericht_hover.png);
 	border: none; 
 }
 
@@ -223,7 +226,7 @@ margin-top: 8px;
 #zigzag{
 	height: 51px; 
 	width: 100%; 
-	background-image: url(images/zigzag_bottom.png);
+	background-image: url(/images/zigzag_bottom.png);
 	background-repeat: repeat-x;
 }
 
@@ -252,48 +255,48 @@ margin-top: 8px;
 }
 
 #categorieen_btn{
-	background-image: url(images/categorieen.png);
+	background-image: url(/images/categorieen.png);
 		display:inline-block;
 			margin-top: 70px; 
 
 }
 
 #categorieen_btn:hover, #categorieen_btn:active{
-	background-image: url(images/categorieen_btn_hover.png);
+	background-image: url(/images/categorieen_btn_hover.png);
 
 }
 
 #n_artikelen_btn{
-	background-image: url(images/nieuw_btn.png);
+	background-image: url(/images/nieuw_btn.png);
 		display:inline-block;
 			margin-top: 70px; 
 
 }
 
 #n_artikelen_btn:hover, #n_artikelen_btn:active{
-	background-image: url(images/nieuw_btn_hover.png);
+	background-image: url(/images/nieuw_btn_hover.png);
 }
 
 #top_btn{
-	background-image: url(images/top_btn.png);
+	background-image: url(/images/top_btn.png);
 		display:inline-block;
 			margin-top: 70px; 
 
 }
 
 #top_btn:hover, #top_btn:active{
-	background-image: url(images/top_btn_hover.png);
+	background-image: url(/images/top_btn_hover.png);
 }
 
 #zoek_functie{
-	background-image: url(images/zoeken_btn.png);
+	background-image: url(/images/zoeken_btn.png);
 		display:inline-block;
 			margin-top: 70px; 
 
 }
 
 #zoek_functie:hover, #zoek_functie:active{
-	background-image: url(images/zoeken_btn_hover.png);
+	background-image: url(/images/zoeken_btn_hover.png);
 }
 /*Artiekle vinden Buttons==========================================================*/
 
@@ -429,12 +432,12 @@ background-color: green;
 .facebook{
 	width: 44px;
 	height: 44px;
-	background-image: url(images/facebook_icon.png);
+	background-image: url(/images/facebook_icon.png);
 	display: block;
 }
 
 .facebook:hover, .facebook:active{
-	background-image: url(images/facebook_icon_hover.png);
+	background-image: url(/images/facebook_icon_hover.png);
 }
 
 .twitter{
@@ -442,7 +445,7 @@ background-color: green;
 	height: 44px; 
 	margin-top: 10px; 
 	display: block;
-	background-image: url(images/twitter_icon.png);
+	background-image: url(/images/twitter_icon.png);
 }
 
 .twitter:hover, .twitter:active{

@@ -2,28 +2,27 @@
 
 <div id="Artikel_popUP" class="hide">
 	<div id="kop">
-		<h3>titel balabl</h2>
+		<h3 class="popup-title"> </h3>
 			<a class="b-close">x</a>
 		<a href="#" id="fav_icon">11</a>
 		
 	</div>
     
-    	<div id="gallery">
-    		<img src="images/victorian_dress_full_train_by_magikstock.png">
+    	<div id="popup-gallery">
+    		<img id="popup-image" src="#">
     	</div>
 
 		<div id="art_info">
 
 				<div id="text">
-					<p>Candy gingerbread jelly-o ice cream. Muffin icing cookie cotton candy marshmallow cotton candy. Gingerbread cheesecake bonbon tootsie roll soufflé. Applicake wafer bonbon pudding pie cheesecake. Ice cream chocolate bonbon wafer gummi bears cupcake icing. Marzipan gummies chocolate cake lollipop sugar plum gingerbread donut. Jelly-o chocolate muffin. Sweet bonbon jujubes powder liquorice liquorice bear claw. Bear claw faworki gummi bears croissant macaroon jelly. Pie fruitcake jujubes apple pie carrot cake jelly-o. Gingerbread tart cotton candy caramels tootsie roll gummies chupa chups. Cake </p>
-					<p>
-					Geupload door: <a href="#">Ilse Kroes</a><br>
-					Datum: 20/11/2013</p>
+					<div class="popup-content">Oeps, er ging iets mis. probeer dit artikel nog eens te laden.</div>
+					<div class="popup-name">Geupload door: ...</div>
+					<div class="popup-date">Datum: ...</div>
 				</div>
 
 				<div id="art_indeling">
-					<p id="categorie"><a href="#">Trouwen</a></p>
-					<p id="tags"> <a href="#">tage</a>, <a href="#">tage</a>, </p>
+					<div class="popup-category">...</div>>
+					<div class="popup-tags">...</div>
 				</div>
 
 				<div id="art_delen">
@@ -34,9 +33,9 @@
 				</div>
 
 				<div id="art_actie">
-					<a href="#" id="link_btn">Link</a>
-					<a href="#" id="fav_btn_uit">Fav +</a>
-					<a href="#" id="comments_btn">Reacties</a>
+					<div class="popup-link_btn"><a href="#" id="link_btn">Link</a></div>
+					<div class="popup-fav_btn"><a href="#" id="fav_btn_uit">Fav +</a></div>
+					<div class="popup-comments_btn"><a href="#" id="comments_btn">Reacties</a></div>
 				</div>
 
 				<div id="reaties_container">
@@ -68,124 +67,30 @@
 <!--PopUp=======================================================================-->
 
 <!--Artikelen==============================================================================-->
-
-	<div class="artikel_wrapper">
-		<div class="artikel_container">
-			<div class="kop_k">
-				<h3>Titel artikel </h3> <a href="#" class="fav_icon_k">11</a>
-			</div>
-			<img class="artikel_tegel" src="images/ocelot___stock_image_by_sekhmet_stock-d3eup3o.png" alt="images">
-			
-
-			<div class="text_wrapper">
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa. </p>
-			</div>
-			<button id="Artikel_ID">Bekijken<div></div></button>
-		</div>
-	</div>
-
+	<% indexarticlenumber = 0 %>
+	<% @articles.each do |article| %>
 		<div class="artikel_wrapper">
-		<div class="artikel_container">
-						<div class="kop_k">
-				<h3>Titel artikel </h3> <a href="#" class="fav_icon_k">11</a>
-			</div>
-			<img class="artikel_tegel" src="images/Stock_280__peacock_feathers_by_AlzirrSwanheartStock.png" alt="images">
-			<div class="text_wrapper">
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa. </p>
-			</div>
-			<button>Bekijken<div></div></button>
-		</div>
-	</div>
-
-	<div class="artikel_wrapper">
-		<div class="artikel_container">
-						<div class="kop_k">
-				<h3>Titel artikel </h3> <a href="#" class="fav_icon_k">11</a>
-			</div>
-
-			<img class="artikel_tegel" src="images/ocelot___stock_image_by_sekhmet_stock-d3eup3o.png" alt="images">
-			<div class="text_wrapper">
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa. </p>
-			</div>
-			<button>Bekijken</button>
-		</div>
-	</div>
-
-		<div class="artikel_wrapper">
-		<div class="artikel_container">
-
-						<div class="kop_k">
-				<h3>Titel artikel </h3> <a href="#" class="fav_icon_k">11</a>
-			</div>
-
-			<img class="artikel_tegel" src="images/victorian_dress_full_train_by_magikstock.png" alt="images">
-			<div class="text_wrapper">
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa. </p>
-			</div>
-			<button>Bekijken</button>
-		</div>
-	</div>
-
-		<div class="artikel_wrapper">
-		<div class="artikel_container">
-
-						<div class="kop_k">
-				<h3>Titel artikel </h3> <a href="#" class="fav_icon_k">11</a>
-			</div>
-
-			<img class="artikel_tegel" src="images/ocelot___stock_image_by_sekhmet_stock-d3eup3o.png" alt="images">
-			<div class="text_wrapper">
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa. </p>
-			</div>
-			<button>Bekijken</button>
-		</div>
-	</div>
-
-	<div class="artikel_wrapper">
-		<div class="artikel_container">
-
-						<div class="kop_k">
-				<h3>Titel artikel </h3> <a href="#" class="fav_icon_k">11</a>
-			</div>
-			<img class="artikel_tegel" src="images/Stock_280__peacock_feathers_by_AlzirrSwanheartStock.png" alt="images">
-			<div class="text_wrapper">
-				
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa. </p>
-			</div>
-			<button>Bekijken</button>
-		</div>
-	</div>
-
-	<div class="artikel_wrapper">
-		<div class="artikel_container">
-
-						<div class="kop_k">
-				<h3>Titel artikel </h3> <a href="#" class="fav_icon_k">11</a>
-			</div>
-			<img class="artikel_tegel" src="images/ocelot___stock_image_by_sekhmet_stock-d3eup3o.png" alt="images">
-			<div class="text_wrapper">
+			<div class="artikel_container">
+				<div class="kop_k">
+					<h3><%= article.title %></h3> <a href="#" class="fav_icon_k">11</a>
+				</div>
+				<img class="artikel_tegel" src="<%= article.picture_url(:thumb) %>" alt="images">
 				
 
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa. </p>
-			</div>
-			<button>Bekijken</button>
-		</div>
-	</div>
+				<div class="text_wrapper">
+					<%=h truncate(article.content, :length => 270) %>
+				</div>
 
-	<div class="artikel_wrapper">
-		<div class="artikel_container">
-						<div class="kop_k">
-				<h3>Titel artikel </h3> <a href="#" class="fav_icon_k">11</a>
+				<button class="article-index-button" id="<%= indexarticlenumber %>">Bekijken<div></div></button>
+				<% indexarticlenumber += 1 %>
 			</div>
-			<img class="artikel_tegel" src="images/victorian_dress_full_train_by_magikstock.png" alt="images">
-			<div class="text_wrapper">
-				
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa. </p>
-			</div>
-			<button>Bekijken</button>
 		</div>
-	</div>
+	<% end %>
 
 </div>
 
 <!--ENDE Artikelen======================================================================-->
+
+	<div id="footer">
+		<div id="more_btn_container">
+			<button>More</button>
