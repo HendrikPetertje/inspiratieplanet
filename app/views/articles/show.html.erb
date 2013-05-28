@@ -66,8 +66,6 @@
 		<% end %>
 
 	<% @article.reviews.each do |review| %>
-
-		<%= image_tag @article.picture_url(:thumb) %>
 		<hr><b><%= review.title %></b><br/><br/>
 
 		<%= review.content %><br/><br/>

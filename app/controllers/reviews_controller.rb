@@ -2,6 +2,14 @@ class ReviewsController < ApplicationController
   before_filter :authenticate_user!, only: [:new, :create, :edit, :save]
   # GET /reviews
   # GET /reviews.json
+
+  def reviews
+    @reviews = Review.all
+
+    respond_to do |format|
+      format.json { render json: @reviews }
+    end
+  end
   
   def create
    @article = Article.find(params[:article_id])

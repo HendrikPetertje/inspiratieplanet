@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Geen Inspiratie</title>
+  <title><%= render_title %></title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -13,7 +13,7 @@
 		<header class="header">
 			<div class="logo">
 			
-			<h1><img src="/images/logo.png"> GeenInspiratie</h1>
+			<a href="/" title="terug naar home" target="_self"><h1><img src="/images/logo.png"> GeenInspiratie</h1></a>
 			<a href="#" class="nav-menu-btn_2">Menu</a>
 			</div>
 
@@ -22,10 +22,15 @@
 					<!--Dropdown-->
 					<ul class="navleft-dropdown">
 
-						<li class="Artikel_toevoegen_2"><a href="#" >Artikel Toevoegen</a></li>
-						<li class="in-uitloggen_2"><a href="#">Inloggen <!-- uitloggen --> </a></li>
-						<li class="gebuiker_2"><a href="#">Lotje2001 <!-- Allen bij inloogen --> </a></li>
-
+						<li class="Artikel_toevoegen_2"><a href="/articles/new" >Artikel Toevoegen</a></li>
+						<li class="in-uitloggen_2">
+							<a href="users/sign_in">Inloggen</a></li>
+							<% if user_signed_in? %>
+								<li class="gebuiker_2"><a href="dashboard/user/"><%= current_user.name %></a></li>
+								<%= link_to('uitloggen', destroy_user_session_path, :method => :delete) %></li>
+							<% else %>
+								<%= link_to('inloggen', new_user_session_path)  %> 
+							<% end %>
 
 						<li><a href="#">Over Ons</a></li>
 						<li><a HREF="#">Contact</A></li>
@@ -45,10 +50,16 @@
 						</em>
 
 				</a></li>
-				
-				<li class="in-uitloggen"><a href="#">Inloggen <!-- uitloggen --> </a></li>
-				<li class="gebuiker"><a href="#">Lotje2001 <!-- Allen bij inloogen --> </a></li>
-				<li class="Fleft"><a href="#" >Artikel Toevoegen</a></li>
+				<% if user_signed_in? %>
+					<li class="in-uitloggen"><%= link_to('uitloggen', destroy_user_session_path, :method => :delete) %></li>
+					<li class="gebuiker"><a href="/dashboard/user/"><%= current_user.name %></a></li>
+					<% if current_user.admin? %>
+						<li class="gebuiker"><a href="/dashboard/admin/">Admin</a></li>
+					<% end %>
+				<% else %>
+					<li class="in-uitloggen"><%= link_to('inloggen', new_user_session_path)  %></li>
+				<% end %>
+				<li class="Fleft"><a href="/articles/new/" >Artikel Toevoegen</a></li>
 				
 				</ul>
 				
@@ -85,10 +96,6 @@
 			<h3>titel artikel</h3>
 			<img src="images/ocelot___stock_image_by_sekhmet_stock-d3eup3o.png">
 		</div></a>
-
-
-
-	
 	</div>
 
 		<button id="btn_spore">
@@ -128,7 +135,7 @@
 
 <div id="kop_wrapper">
 	<div id="kpop_container">
-		<h2>Alle categorien</h2>
+		<h1><%= render_subtitle %></h1>
 		<!--Messeage++++++++++++++++++++++++-->
 		<div id="message">
 			<% if flash[:error] %>

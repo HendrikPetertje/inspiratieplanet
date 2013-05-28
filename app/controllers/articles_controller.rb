@@ -3,6 +3,8 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
+    @title = "Inspiratieplanet - Alle artikelen"
+    @subtitle = "Alle artikelen"
     @articles = Article.find(:all, :conditions => { :accepted => true })
      respond_to do |format|
       format.html # index.html.erb
@@ -14,6 +16,8 @@ class ArticlesController < ApplicationController
   # GET /articles/1.json
   def show
     @article = Article.find(params[:id])
+    @subtitle = @article.title
+    @title = "Inspiratieplanet - " + @article.title
     @userName = @article.user.name
     if user_signed_in?
       @showheart = Favorite.exists?(:user_id => current_user.id, :article_id => @article.id)
@@ -28,6 +32,8 @@ class ArticlesController < ApplicationController
   # GET /articles/new.json
   def new
     @article = Article.new
+    @title = "Inspiratieplanet - Nieuw artikel"
+    @subtitle = "nieuw artikel"
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @article }

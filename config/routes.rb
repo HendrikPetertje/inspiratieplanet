@@ -8,6 +8,7 @@ Inspiratieplanet::Application.routes.draw do
   get "dashboard/admin"
   get "dashboard/user"
   get "dashboard/manage_user"
+  get "reviews/reviews"
 
   resources :articles do
       member do
