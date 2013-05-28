@@ -21,7 +21,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: inspiratieplanet_production
+  database: inspiratieplanet
   pool: 5
-  username: postgres
-  password: 
+  username: inspiratieplanet
+  password: inspiratieplanet
