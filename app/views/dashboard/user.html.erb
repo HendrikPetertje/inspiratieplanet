@@ -5,7 +5,9 @@
 	<div id="user_container">
 		
 		<div class="avatar">
+
 			<img src="<%= current_user.avatar_url(:thumb) %>">
+			
 		</div>	
 	
 	<div class="name_block">
@@ -29,7 +31,7 @@
 	<% @articleslimit.each do |article| %>
 	<div class="article_wrapper">
 		<div class="article_container">
-			<img class="article_tile" src="<%= article.picture_url(:thumb) %>" alt="images">
+			<img class="article_tile" src="<%= article.picture_url(:thumb)  %>" alt="images">
 
 				<div class="kop_k">
 					<h3><%= article.title %></h3>
