@@ -2,17 +2,16 @@
 	Welkom <%= current_user.name %>
 </h1>
 
-	<div id="user" class ="container">
-			<h2 class="welcome"></h2>
+	<div id="user_container">
 		
 		<div class="avatar">
 			<img src="<%= current_user.avatar_url(:thumb) %>">
 		</div>	
 	
 	<div class="name_block">
-		<h3 class="username">Welkom <%= current_user.name %></h3>
+		
 
-		<div class="place-article_button">
+		<div class="place_article_button">
 			<button type="button">
 			
 			</button>
@@ -26,20 +25,26 @@
 
 <!--Articles============================================================!-->
 
-<div id="articles" class="container">
+	<% userarticlenumber = 0 %>
 	<% @articleslimit.each do |article| %>
-		<div class="article_block">
+	<div class="article_wrapper">
+		<div class="article_container">
 			<img class="article_tile" src="<%= article.picture_url(:thumb) %>" alt="images">
 
-				<div class="text_wrapper">
+				<div class="kop_k">
 					<h3><%= article.title %></h3>
-					<div class="article_text">
-					<%= truncate(article.content, :length => 150, :separator => ' ') %>
+					
+					<div class="text_wrapper">
+					<%= truncate(article.content, :length => 270, :separator => ' ') %>
 					</div>
+
+					<button class="article-index-button" id="<%= userarticlenumber %>">Bekijken <div></div> </button>
+					
 					<%= article.created_at %>
 					<%= link_to 'Show', article %>
 					<%= link_to 'Edit', edit_article_path(article) %>
 					<%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %>
+					
 					<a href="#" id="link">Show/Hide</a>
 					<div id="mydiv">Some content</div>
 				</div>
