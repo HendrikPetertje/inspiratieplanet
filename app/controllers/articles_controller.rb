@@ -6,7 +6,7 @@ class ArticlesController < ApplicationController
     @title = "Inspiratieplanet - Alle artikelen"
     @subtitle = "Alle artikelen"
     @articles = Article.find(:all, :conditions => { :accepted => true })
-     respond_to do |format|
+      respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @articles.to_json(
         :include => [
@@ -25,6 +25,7 @@ class ArticlesController < ApplicationController
     @subtitle = @article.title
     @title = "Inspiratieplanet - " + @article.title
     @userName = @article.user.name
+
     if user_signed_in?
       @showheart = Favorite.exists?(:user_id => current_user.id, :article_id => @article.id)
     end
@@ -47,6 +48,8 @@ class ArticlesController < ApplicationController
     @article = Article.new
     @title = "Inspiratieplanet - Nieuw artikel"
     @subtitle = "nieuw artikel"
+    @categories = Category.find(:all)
+    
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @article }
@@ -71,6 +74,7 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(params[:article])
     @article.user_id = current_user.id
+
     
     respond_to do |format|
       if @article.save
