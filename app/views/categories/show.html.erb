@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+<%= @category.title %>
+<ul>
+	<% @category.articles.each do |article| %>
+		<li>titel <%= article.title %></li>
+		<li>content <%= article.content %></li>
+		<li><hr></li>
+	<% end %>
+</ul>
+
+<%= link_to 'Edit', edit_category_path(@category) %> |
+<%= link_to 'Back', categories_path %>

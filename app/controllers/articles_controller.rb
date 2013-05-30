@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
   # GET /articles.json
   def index
     @articles = Article.find(:all, :conditions => { :accepted => true })
-     respond_to do |format|
+      respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @articles }
     end
@@ -15,6 +15,7 @@ class ArticlesController < ApplicationController
   def show
     @article = Article.find(params[:id])
     @userName = @article.user.name
+
     if user_signed_in?
       @showheart = Favorite.exists?(:user_id => current_user.id, :article_id => @article.id)
     end
@@ -28,6 +29,8 @@ class ArticlesController < ApplicationController
   # GET /articles/new.json
   def new
     @article = Article.new
+    @categories = Category.find(:all)
+
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @article }
@@ -52,6 +55,7 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(params[:article])
     @article.user_id = current_user.id
+
     
     respond_to do |format|
       if @article.save

@@ -26,6 +26,10 @@
     <%= f.label :tags %><br />
     <%= f.text_field :tags %>
   </div>
+  <div class="field">
+    <%= f.label :categorien %><br />
+    <%= collection_select :article, :category_id, @categories, :id, :title %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

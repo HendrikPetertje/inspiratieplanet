@@ -1,13 +1,22 @@
 Inspiratieplanet::Application.routes.draw do
+  
+
+  resources :categories do 
+    resources :articles
+  end
+
+
   resources :articles do
     resources :reviews 
   end
   devise_for :users
   resources :favorites
-  
+
+
   get "dashboard/admin"
   get "dashboard/user"
   get "dashboard/manage_user"
+  get "category/show"
 
   resources :articles do
       member do
@@ -22,6 +31,7 @@ Inspiratieplanet::Application.routes.draw do
   match "/login" => "users#sign_in"
   match "/favorites/add/:article_id" => "favorites#create", :as => :favorite
   match "/favorites/destroy/:article_id" => "favorites#destroy"
+  match "/category/show" => "categories#show", :as => :category
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
