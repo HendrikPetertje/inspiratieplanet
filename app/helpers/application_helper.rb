@@ -10,3 +10,4 @@ def render_subtitle
   return @subtitle if defined?(@subtitle)
   " "
 end
+

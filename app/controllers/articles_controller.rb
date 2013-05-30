@@ -8,7 +8,13 @@ class ArticlesController < ApplicationController
     @articles = Article.find(:all, :conditions => { :accepted => true })
      respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @articles }
+      format.json { render json: @articles.to_json(
+        :include => [
+          
+          :reviews => {:include => { :user => {:except => [:admin, :email, :updated_at, :created_at]  } }},
+          :user => {:except => [:admin, :email, :updated_at, :created_at]}
+        ]
+      )}
     end
   end
 
@@ -24,7 +30,14 @@ class ArticlesController < ApplicationController
     end
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @article }
+      format.json { render json: @article.to_json(
+        :include => [
+          
+          :reviews, 
+          :user => {:except => [:admin, :email, :updated_at, :created_at]}
+        ]
+
+      )}
     end
   end
 

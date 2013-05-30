@@ -14,8 +14,16 @@
                 console.log(indexarticleid);
                 e.preventDefault();
 
+                // fills popup element with review form
+                reviewnumber = 0;
+                $('#reactiesblock').empty().append('<li>' +
+                            '<input class="comments_input_titel" type="text" placeholder="naam">' +
+                            '<textarea class="comments_input" placeholder="reactie"></textarea>' +
+                            '<button class="post_btn" type="submit" role="button">Post</button>' +
+                        '</li>')
+
                 // Fills popup element with content
-                $.getJSON('articles.json', function(indexarticle){
+                $.getJSON('/articles.json', function(indexarticle){
                     $('.popup-title').empty().append(indexarticle[indexarticleid].title);
                     $('#popup-image').attr('src', indexarticle[indexarticleid].picture.pageimage.url);
                     $('.popup-content').empty().append(indexarticle[indexarticleid].content);
@@ -23,17 +31,32 @@
                     $('.popup-date').empty().append('Datum: ' + indexarticle[indexarticleid].created_at);
                     $('.popup-tags').empty().append('Datum: ' + indexarticle[indexarticleid].tags);
 
+                    for (var i = reviewnumber; i < reviewnumber +4 ; i++ ) {
+                        if (indexarticle[indexarticleid].reviews[i] === undefined) {
+
+                        }else{
+                            $('#reactiesblock').append(
+                                '<li>'+
+                                    '<p class="gebruiker_naam">' + indexarticle[indexarticleid].reviews[i].user.name + '</p>' +
+                                    '<p class="comment">' + indexarticle[indexarticleid].reviews[i].content + '</p>' +
+                                '</li>'
+                            );
+                        };
+                    };
+
                 });
+
 
                 // Triggering bPopup when click event is fired
                 if ($(window).width() >= 500) {
                     $('#Artikel_popUP').bPopup({
                         speed: 650,
+                        follow: [false, false], //x, y
                         transition: 'slideIn'
                     });
 
                 }else{
-                    window.location = '/article/'
+                    window.location = '/articles/' + indexarticleid;
 
                 }
 

@@ -4,4 +4,5 @@ class Review < ActiveRecord::Base
   attr_accessible :author, :content, :rating, :title, :article_id, :review, :user_id, :picture
 
   validates :user_id, :presence => true
+
 end

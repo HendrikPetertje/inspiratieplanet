@@ -7,7 +7,7 @@ class ReviewsController < ApplicationController
     @reviews = Review.all
 
     respond_to do |format|
-      format.json { render json: @reviews }
+      format.json { render json: @reviews.to_json(:include => { :user => {:except => [:admin, :email, :updated_at, :created_at]  } })}
     end
   end
   
