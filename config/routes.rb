@@ -28,7 +28,7 @@ Inspiratieplanet::Application.routes.draw do
       end   
   end
 
-  root to: 'articles#index'
+  root to: 'categories#index'
   match "/login" => "users#sign_in"
   match "/favorites/add/:article_id" => "favorites#create", :as => :favorite
   match "/favorites/destroy/:article_id" => "favorites#destroy"
