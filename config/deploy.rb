@@ -20,3 +20,11 @@ default_run_options[:pty] = true
 role :web, ip_address
 role :app, ip_address
 role :db,  ip_address, :primary => true
+
+desc "tail log files"
+task :tail, :roles => :app do
+  run "tail -f #{shared_path}/log/#{rails_env}.log" do |channel, stream, data|
+    puts "#{channel[:host]}: #{data}"
+    break if stream == :err
+  end
+end
