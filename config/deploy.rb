@@ -28,3 +28,8 @@ task :tail, :roles => :app do
     break if stream == :err
   end
 end
+
+desc "populate database"
+task :bootstrap do
+	rake "bootstrap:all"
+end
