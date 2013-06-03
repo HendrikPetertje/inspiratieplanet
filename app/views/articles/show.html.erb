@@ -60,6 +60,7 @@
 		<% elsif user_signed_in? %>
 			<div class='favoritebutton' id='<%= @article.id %>'></div>
 		<% end %>
+		favorited by <%= @article.favorites_count %> people
 	</div>
 	<% if user_signed_in? && current_user.admin? && @article.accepted %>
 			<%= link_to "Afkeuren", reject_article_path(@article), method: :put %>

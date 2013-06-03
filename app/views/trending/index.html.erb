@@ -1,0 +1,8 @@
+<% @articles.each do |article| %>
+<ul>
+	<li><%= article.title %></li>
+	<li>ID = <%= article.id %></li>
+	<li>favorites = <%= article.favorites_count %> </li>
+</ul>
+<br>
+<% end %>

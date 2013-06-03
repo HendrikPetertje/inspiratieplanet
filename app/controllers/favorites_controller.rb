@@ -12,6 +12,7 @@ class FavoritesController < ApplicationController
 
   def create
     current_user.favorites.create(:article_id => params[:article_id])
+    # Article.find(params[:article_id]).update_attribute("favorites_count", favorites_count + 1)
     render :layout => false
   end
 

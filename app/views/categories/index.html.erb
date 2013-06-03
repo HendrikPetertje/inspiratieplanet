@@ -1,0 +1,11 @@
+<h1>Listing categories</h1>
+
+
+    <% @categories.each do |category| %>
+ 	
+ 	<ul>
+ 		<li><%= link_to category.title, category %></li>
+ 	</ul>
+    <% end %>
+
+<br />
