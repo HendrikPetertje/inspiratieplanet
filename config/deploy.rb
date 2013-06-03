@@ -31,5 +31,5 @@ end
 
 desc "populate database"
 task :bootstrap do
-	rake "bootstrap:all"
+	run("cd #{deploy_to}/current && /usr/bin/env rake bootstrap:all RAILS_ENV=production")
 end
