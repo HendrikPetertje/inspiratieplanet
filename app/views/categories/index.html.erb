@@ -1,11 +1,167 @@
-<h1>Listing categories</h1>
+<% @categories.each do |category| %>
+<div class="artikel_wrapper categoriee categorieparams">
+	<div style="background-color:<%= category.color %>">
+		<a href="" class="top"><h4>Feest</h4></a>
+
+		<ul>
+			<li><% link_to category.title, category %></li>
+		</ul>	
+	</div>
+<% end %>
+<!-- 	<a href="" class="dropdown_2">Meer</a>
+		
+		<ul>
+			<li></li>
+			<li><a href="#">Aanzoek</a></li>
+			<li><a href="#">Drukwerk</a></li>
+			<li><a href="#">Evenementen</a></li>
+			<li><a href="#">Feestdagen</a></li>
+			<li><a href="#">Huwelijk</a></li>
+			<li><a href="#">Jubilea</a></li>
+			<li><a href="#">Muziek</a></li>
+			<li><a href="#">Taarten en zoet</a></li>
+			<li><a href="#">Teksten gedichten</a></li>
+			<li><a href="#">Drukwerk</a></li>
+
+		</ul>	
+	</div> -->
+
+	<div class="artikel_wrapper categoriee cadeaus">
+		<a href="" class="top"><h4>Cadeaus</h4></a>
+		<a href="" class="dropdown_2">Meer</a>
+
+		<ul>
+			<li><a href="#">Aanzoek</a></li>
+			<li><a href="#">Drukwerk</a></li>
+			<li><a href="#">Evenementen</a></li>
+			<li><a href="#">Feestdagen</a></li>
+			<li><a href="#">Drukwerk</a></li>
+			<li><a href="#">Drukwerk</a></li>
+
+			<li><a href="#">Drukwerk</a></li>
+			<li><a href="#">Drukwerk</a></li>
+			<li><a href="#">Drukwerk</a></li>
+			<li><a href="#">Drukwerk</a></li>
+
+		</ul>
+	</div>
+
+	<div class="artikel_wrapper categoriee relatie">
+		<a href="" class="top"><h4>Relatie Familie</h4></a>
+		<a href="" class="dropdown_2">Meer</a>
+
+		<ul>
+			<li><a href="#">Aanzoek</a></li>
+			<li><a href="#">Drukwerk</a></li>
+			<li><a href="#">Evenementen</a></li>
+			<li><a href="#">Feestdagen</a></li>
+			<li><a href="#">Drukwerk</a></li>
+			<li><a href="#">Drukwerk</a></li>
+
+			<li><a href="#">Drukwerk</a></li>
+			<li><a href="#">Drukwerk</a></li>
+			<li><a href="#">Drukwerk</a></li>
+			<li><a href="#">Drukwerk</a></li>
+
+		</ul>	
+	</div>
+
+	<div class="artikel_wrapper categoriee er">
+		<a href="" class="top"><h4>Er op uit!</h4></a>
+		<a href="" class="dropdown_2">Meer</a>
+
+		<ul>
+			<li><a href="#">Aanzoek</a></li>
+			<li><a href="#">Drukwerk</a></li>
+			<li><a href="#">Evenementen</a></li>
+			<li><a href="#">Feestdagen</a></li>
+			<li><a href="#">Drukwerk</a></li>
+			<li><a href="#">Drukwerk</a></li>
+
+			<li><a href="#">Drukwerk</a></li>
+			<li><a href="#">Drukwerk</a></li>
+			<li><a href="#">Drukwerk</a></li>
+			<li><a href="#">Drukwerk</a></li>
+
+		</ul>	
+	</div>
+
+	<div class="artikel_wrapper categoriee beauty">
+		<a href="" class="top"><h4>Beauty en Opvallend</h4></a>
+		<a href="" class="dropdown_2">Meer</a>
+
+		<ul>
+			<li><a href="#">Aanzoek</a></li>
+			<li><a href="#">Drukwerk</a></li>
+			<li><a href="#">Evenementen</a></li>
+			<li><a href="#">Feestdagen</a></li>
+			<li><a href="#">Drukwerk</a></li>
+			<li><a href="#">Drukwerk</a></li>
+
+			<li><a href="#">Drukwerk</a></li>
+			<li><a href="#">Drukwerk</a></li>
+			<li><a href="#">Drukwerk</a></li>
+			<li><a href="#">Drukwerk</a></li>
+		</ul>	
+	</div>
+
+	<div class="artikel_wrapper categoriee mode">
+		<a href="" class="top"><h4>Mode</h4></a>
+		<a href="" class="dropdown_2">Meer</a>
+
+		<ul>
+			<li><a href="#">Aanzoek</a></li>
+			<li><a href="#">Drukwerk</a></li>
+			<li><a href="#">Evenementen</a></li>
+			<li><a href="#">Feestdagen</a></li>
+			<li><a href="#">Drukwerk</a></li>
+			<li><a href="#">Drukwerk</a></li>
+
+			<li><a href="#">Drukwerk</a></li>
+			<li><a href="#">Drukwerk</a></li>
+			<li><a href="#">Drukwerk</a></li>
+			<li><a href="#">Drukwerk</a></li>
+		</ul>	
+	</div>
+
+	<div class="artikel_wrapper categoriee wonen">
+		<a href="" class="top"><h4>Wonen</h4></a>
+		<a href="" class="dropdown_2">Meer</a>
+
+		<ul>
+			<li><a href="#">Aanzoek</a></li>
+			<li><a href="#">Drukwerk</a></li>
+			<li><a href="#">Evenementen</a></li>
+			<li><a href="#">Feestdagen</a></li>
+			<li><a href="#">Drukwerk</a></li>
+			<li><a href="#">Drukwerk</a></li>
+
+			<li><a href="#">Drukwerk</a></li>
+			<li><a href="#">Drukwerk</a></li>
+			<li><a href="#">Drukwerk</a></li>
+			<li><a href="#">Drukwerk</a></li>
+
+		</ul>	
+	</div>
+
+	<div class="artikel_wrapper categoriee werk">
+		<a href="" class="top"><h4>Werk</h4></a>
+		<!-- <a href="" class="dropdown_2">Meer</a>
+
+		<ul>
+			<li><a href="#">Aanzoek</a></li>
+			<li><a href="#">Drukwerk</a></li>
+			<li><a href="#">Evenementen</a></li>
+			<li><a href="#">Feestdagen</a></li>
+			<li><a href="#">Drukwerk</a></li>
+			<li><a href="#">Drukwerk</a></li>
+
+			<li><a href="#">Drukwerk</a></li>
+			<li><a href="#">Drukwerk</a></li>
+			<li><a href="#">Drukwerk</a></li>
+			<li><a href="#">Drukwerk</a></li>
+
+		</ul>	 -->
+	</div>
 
 
-    <% @categories.each do |category| %>
- 	
- 	<ul>
- 		<li><%= link_to category.title, category %></li>
- 	</ul>
-    <% end %>
-
-<br />

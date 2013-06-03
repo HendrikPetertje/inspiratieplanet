@@ -25,6 +25,7 @@ Inspiratieplanet::Application.routes.draw do
   get "reviews/reviews"
   get "category/show"
   get "privacy/edit"
+  get "/categories/categorieen_pagian"
 
   resources :articles do
       member do
