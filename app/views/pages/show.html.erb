@@ -1,6 +1,11 @@
-<p id="notice"><%= notice %></p>
+<br/>
 
+<%= @page.about %>
 
-<%= link_to 'Edit', edit_page_path(@page) %> |
-<%= link_to 'Back', pages_path %>
+<br/><br/>
 
+<% if @usersign %>
+
+<%= link_to "Aanpassen", page_name_edit_path(@page.privacy) %>
+
+<% end %>

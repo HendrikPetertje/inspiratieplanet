@@ -1,5 +1,7 @@
 Inspiratieplanet::Application.routes.draw do
   
+  get 'pages/:privacy/' => 'pages#show', :as => 'page_name_page'
+  get 'pages/:privacy/edit' => 'pages#edit', :as => 'page_name_edit'
 
   resources :pages
 
@@ -16,12 +18,13 @@ Inspiratieplanet::Application.routes.draw do
   resources :favorites
 
 
+
   get "dashboard/admin"
   get "dashboard/user"
   get "dashboard/manage_user"
   get "reviews/reviews"
   get "category/show"
-  get "privacy/edit/id"
+  get "privacy/edit"
 
   resources :articles do
       member do
@@ -39,7 +42,8 @@ Inspiratieplanet::Application.routes.draw do
   match "/category/show" => "categories#show", :as => :category
   match "/pages/" => "pages#index"
   match "/privacy/" => "pages#privacy"
- 
+  put "/privacy/edit" => 'pages#wijzigen'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
