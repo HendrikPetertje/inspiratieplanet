@@ -12,3 +12,4 @@ the articles page form the leading platform within the site. thei homepage is li
 ## Users ##
 At the writing of this documentation. user pages are being added to the app. they currently exist from a default scaffolded set of options and more details will be added in future commits of this code.
 
+more details will be added in the comming days more info can be found on our wiki
