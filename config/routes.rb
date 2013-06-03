@@ -18,6 +18,9 @@ Inspiratieplanet::Application.routes.draw do
   get "dashboard/manage_user"
   get "reviews/reviews"
   get "category/show"
+  get "trending/index"
+
+  match "trending" => "trending#index"
 
   resources :articles do
       member do
