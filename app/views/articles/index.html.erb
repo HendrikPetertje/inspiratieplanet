@@ -67,25 +67,29 @@
 <!--PopUp=======================================================================-->
 
 <!--Artikelen==============================================================================-->
-	<% indexarticlenumber = 0 %>
-	<% @articles.each do |article| %>
-		<div class="artikel_wrapper">
-			<div class="artikel_container">
-				<div class="kop_k">
-					<h3><%= article.title %></h3> <a href="#" class="fav_icon_k">11</a>
-				</div>
-				<img class="artikel_tegel" src="<%= article.picture_url(:thumb) %>" alt="images">
-				
 
-				<div class="text_wrapper">
-					<%=h truncate(article.content, :length => 270) %>
-				</div>
+	<div id="res_wrapper">
+		<% indexarticlenumber = 0 %>
+		<% @articles.each do |article| %>
+			<div class="artikel_wrapper">
+				<div class="artikel_container">
+					<div class="kop_k">
+						<h3><%= article.title %></h3> <a href="#" class="fav_icon_k">11</a>
+					</div>
+					<img class="artikel_tegel" src="<%= article.picture_url(:thumb) %>" alt="images">
+					
 
-				<button class="article-index-button" id="<%= indexarticlenumber %>">Bekijken<div></div></button>
-				<% indexarticlenumber += 1 %>
+					<div class="text_wrapper">
+						<%=h truncate(article.content, :length => 270) %>
+					</div>
+
+					<button class="article-index-button" id="<%= indexarticlenumber %>">Bekijken<div></div></button>
+					<% indexarticlenumber += 1 %>
+				</div>
 			</div>
-		</div>
-	<% end %>
+		<% end %>
+	</div>
+
 
 </div>
 

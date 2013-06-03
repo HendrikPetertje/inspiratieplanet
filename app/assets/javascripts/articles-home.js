@@ -88,13 +88,9 @@
             var lastArticle = null;
             var wrapperHeight = 0;
 
-            /*Opnieuw indelen als windows verandert*/
-            $(function(){
-                $(".wrapper").resize(setupCollums);
-            });
-
             function setupCollums(){
-                wrapperWidth = $('#wrapper').width();
+                Collums = [];
+                wrapperWidth = $('#res_wrapper').width();
                 colWidth = $('.artikel_wrapper').outerWidth();
                 colCount = Math.floor(wrapperWidth/(colWidth + margin));
 
@@ -118,10 +114,18 @@
                     lastArticle = $(this);
                     wrapperHeight = parseFloat(lastArticle.css("top")) + lastArticle.height();
 
-                    $("#wrapper").height(" " + wrapperHeight + "px")
+                    $("#res_wrapper").height(" " + wrapperHeight + "px")
 
                 }); 
             }
+
+            $(".user-articles-morebutton").click(setupCollums);
+
+            /*Opnieuw indelen als windows verandert*/
+            $(function(){
+                setupCollums();
+                $(window).resize(setupCollums);
+            });
 
             /*Functie voor het vinden van de Min value in een array*/
                 Array.min = function(array) {

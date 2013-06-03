@@ -494,6 +494,17 @@ h2{
 	padding-bottom: 45px; 
 }
 
+#wrapper{
+	width: 1000px;
+	margin: 0 auto; 
+}
+
+#res_wrapper{
+	width: 100%;
+	height: 100px;
+	position: relative;
+	background-color: blue;
+}
 
 /**/
 
@@ -518,7 +529,7 @@ h2{
 	}
 
 	#wrapper, 	#kpop_container{
-	width: 750px;
+	width: 750px !important;
 	margin: 0 auto; 
 	padding-left: 10px; 
 	}
@@ -589,8 +600,9 @@ margin: 0 auto;
 		}
 
 		#wrapper, 	#kpop_container{
-		width: 500px;
-	margin: 0 auto; 
+		width: 500px !important;
+		background: black;
+		margin: 0 auto; 
 		}
 
 		#toelichting_wrapper{
@@ -669,7 +681,7 @@ width: 240px;
 		}
 
 		#wrapper, 	#kpop_container{
-		width: 250px;
+		width: 250px !important;
 	margin: 0 auto; 
 		}
 
