@@ -33,3 +33,8 @@ desc "populate database"
 task :bootstrap do
 	run("cd #{deploy_to}/current && /usr/bin/env rake bootstrap:all RAILS_ENV=production")
 end
+
+desc "populate database with admin"
+task :addadmin do
+	run("cd #{deploy_to}/current && /usr/bin/env rake addadmins:all RAILS_ENV=production")
+end
