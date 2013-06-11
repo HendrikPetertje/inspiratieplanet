@@ -7,22 +7,22 @@ This is the official project-hub of Dreamteam's Inspiratieplanet.
 This project is currently maintained by:
 <table>
 <tr>
-<td><b>[Peter van der Meulen](https://github.com/amonfog/)</b></td><td>Product Owner</td>
+<td><b><a href="https://github.com/amonfog/">Peter van der Meulen</a></b></td><td>Product Owner</td>
 </tr>
 <tr>
-<td><b>[Tjerk Jansma](https://github.com/TjerG)</b></td><td>Scrum Master / Contributor</td>
+<td><b><a href="https://github.com/TjerG">Tjerk Jansma</a></b></td><td>Scrum Master / Contributor</td>
 </tr>
 <tr>
-<td><b>[Bjorn Postma](https://github.com/bj0rno)</b></td><td>Contributor</td>
+<td><b><a href="https://github.com/bj0rno">Bjorn Postma</a></b></td><td>Contributor</td>
 </tr>
 <tr>
-<td><b>[Ilse Kroes](https://github.com/Claudia1234)</b></td><td>Contributor</td>
+<td><b><a href="https://github.com/Claudia1234">Ilse Kroes</a></b></td><td>Contributor</td>
 </tr>
 <tr>
-<td><b>[Joris Bakker](http://flavors.me/jorisbakker)</b></td><td>Contributor</td>
+<td><b><a href="http://flavors.me/jorisbakker">Joris Bakker</b></td><td>Contributor</td>
 </tr>
 <tr>
-<td><b>[Michiel Miedema](http://madmaniac92.hyves.nl/)</b></td><td>Contributor</td>
+<td><b><a href="http://madmaniac92.hyves.nl/">Michiel Miedema</a></b></td><td>Contributor</td>
 </tr>
 </table>
 ##Documentation
