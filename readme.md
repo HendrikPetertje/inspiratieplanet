@@ -83,4 +83,4 @@ if the command above doesn't work try running it with `bundle exec rake db:migra
 The website has everything setup for deploying with capistrano. just edit the database settings in [database.yml](https://github.com/amonfog/inspiratieplanet/blob/master/config/database.yml#L21), add local and deploy keys to the Github project and deploy using `cap deploy` followed by `cap deploy:migrations`. You can add categories by running `cap bootstrap` and an admin by running `cap addadmin`.
 
 ## Feedback and support
-Having questions or requests? visit [Kaboomreclame](http://www.kaboomreclame.nl/contact) for info and contact.
+Having questions or requests? visit [Kaboomreclame](http://www.kaboomreclame.nl/) for info and contact.
