@@ -9,8 +9,6 @@ gem 'bootstrap-will_paginate', '0.0.6'
 gem 'jquery-rails', '2.0.2'
 gem 'devise'
 gem 'capistrano'
-gem 'sass-rails',   '3.2.5'
-gem 'coffee-rails', '3.2.2'
 gem 'uglifier', '1.2.3'
 
 group :development, :test do

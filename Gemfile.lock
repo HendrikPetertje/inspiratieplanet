@@ -263,7 +263,8 @@ DEPENDENCIES
   capybara (= 1.1.2)
   carrierwave
   carrierwave-ftp
-  coffee-rails (= 3.2.2)
+  coffee-rails
+  coffee-script
   cucumber-rails (= 1.2.1)
   database_cleaner (= 0.7.0)
   devise
